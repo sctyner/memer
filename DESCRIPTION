@@ -1,11 +1,15 @@
 Package: memer
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A tidyverse compatible package for creating memes in R using magick.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: c(person("Sam", "Tyner", email = "sctyner90@gmail.com",
+                  role = c("aut", "cre")),
+           person("Eric", "Hare", email = "ericrhare@gmail.com",
+                  role = c("aut", "cre")))
+Description: TBD
+Depends: R (>= 3.4.0)
+Imports:
+Suggests: 
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
