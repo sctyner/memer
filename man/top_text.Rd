@@ -9,4 +9,5 @@ top_text(img, txt, ...)
 \description{
 get_meme("AllTheThings") %>% top_text("R ALL THE THINGS!")
 get_meme("OprahGiveaway") %>% bottom_text("EVERYONE GETS A %>%!!!")
+get_meme("DistractedBf") %>% distbf_text("tidyverse", "new R users", "base R")
 }

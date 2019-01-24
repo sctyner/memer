@@ -2,9 +2,11 @@
 
 export("%>%")
 export(bottom_text)
+export(distbf_text)
 export(get_meme)
 export(list_memes)
 export(top_text)
+importFrom(magick,geometry_point)
 importFrom(magick,image_annotate)
 importFrom(magick,image_read)
 importFrom(magrittr,"%>%")
