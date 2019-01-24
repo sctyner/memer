@@ -1,7 +1,8 @@
 #' Read in the meme you wish to create
 #'
 #'
-#'
+#' @examples
+#' get_meme("AllTheThings")
 #'
 #'
 #' @export
@@ -22,7 +23,6 @@ get_meme <- function(memename) {
 
 #' List available memes
 #'
-#' @importFrom readr read_csv
 #'
 #' @examples
 #' list_memes()

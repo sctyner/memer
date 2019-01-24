@@ -9,3 +9,8 @@ get_meme(memename)
 \description{
 Read in the meme you wish to create
 }
+\examples{
+get_meme("AllTheThings")
+
+
+}
