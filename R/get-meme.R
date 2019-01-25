@@ -3,8 +3,6 @@
 #'
 #' @examples
 #' get_meme("AllTheThings")
-#'
-#'
 #' @export
 #' @importFrom magick image_read
 #' @importFrom readr read_csv
@@ -15,7 +13,7 @@
 #' # run usethis::use_data(blankmemes, overwrite = T)
 #' #
 get_meme <- function(memename) {
-  if (!is.character(memename)){
+  if (!is.character(memename)) {
     stop("Error: memename must be a character. See list_memes().")
   }
   data(blankmemes)
@@ -31,9 +29,8 @@ get_meme <- function(memename) {
 #'
 #' @examples
 #' list_memes()
-#'
 #' @export
-list_memes <- function(){
+list_memes <- function() {
   data("blankmemes")
   return(blankmemes$name)
 }
