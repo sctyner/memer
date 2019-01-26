@@ -9,11 +9,11 @@ distbf_text(img, newgirl, guy, oldgirl, ...)
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=get_meme]{get_meme()}}.}
 
-\item{newgirl}{A character string. Text for the left-most person in the \code{"distractedbf"} meme}
+\item{newgirl}{A character string. Text for the left-most person in the \code{"distractedbf"} meme.}
 
-\item{guy}{A character string. Text for the center person in the \code{"distractedbf"} meme}
+\item{guy}{A character string. Text for the center person in the \code{"distractedbf"} meme.}
 
-\item{oldgirl}{A character string. Text for the right-most person in the \code{"distractedbf"} meme}
+\item{oldgirl}{A character string. Text for the right-most person in the \code{"distractedbf"} meme.}
 
 \item{...}{Arguments passed on to \code{magick::image_annotate}
 \describe{
@@ -39,5 +39,4 @@ Specialized functions for placing text in memes
 \examples{
 get_meme("DistractedBf") \%>\%
   distbf_text("tidyverse", "new R users", "base R")
-
 }

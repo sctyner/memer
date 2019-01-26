@@ -45,5 +45,4 @@ Place text in the meme
 \examples{
 get_meme("AllTheThings") \%>\% top_text("R ALL THE THINGS!")
 get_meme("OprahGiveaway") \%>\% bottom_text("EVERYONE GETS A \%>\%!!!")
-
 }
