@@ -1,13 +1,18 @@
-#' Place text on top of the meme.
+#' Place text in the meme
 #'
 #'
+#' @param img An image of class \code{magick_image}. See \code{\link[=get_meme]{get_meme()}}.
+#' @param txt A character string
+#'
+#' @examples
 #' get_meme("AllTheThings") %>% top_text("R ALL THE THINGS!")
 #' get_meme("OprahGiveaway") %>% bottom_text("EVERYONE GETS A %>%!!!")
-#' get_meme("DistractedBf") %>% distbf_text("tidyverse", "new R users", "base R")
 #'
 #' @importFrom magick image_annotate geometry_point
-#' @export
+#' @inheritDotParams magick::image_annotate -image -text
 #'
+#' @export
+#' @describeIn top_text Place text in center top of meme
 top_text <- function(img, txt, ...) {
   image_annotate(img, txt,
     font = "Impact",
@@ -17,7 +22,7 @@ top_text <- function(img, txt, ...) {
 }
 
 #' @export
-#'
+#' @describeIn top_text Place text in bottom center of meme
 bottom_text <- function(img, txt, ...) {
   image_annotate(img, txt,
     font = "Impact",
@@ -26,6 +31,20 @@ bottom_text <- function(img, txt, ...) {
   )
 }
 
+#' Specialized functions for placing text in memes
+#'
+#' @param img An image of class \code{magick_image}. See \code{\link[=get_meme]{get_meme()}}.
+#' @param newgirl A character string. Text for the left-most person in the \code{"distractedbf"} meme
+#' @param guy A character string. Text for the center person in the \code{"distractedbf"} meme
+#' @param oldgirl A character string. Text for the right-most person in the \code{"distractedbf"} meme
+#'
+#' @importFrom magick image_annotate geometry_point
+#' @inheritDotParams magick::image_annotate -image -text
+#'
+#' @examples
+#' get_meme("DistractedBf") %>%
+#'   distbf_text("tidyverse", "new R users", "base R")
+#'
 #' @export
 #'
 distbf_text <- function(img, newgirl, guy, oldgirl, ...) {

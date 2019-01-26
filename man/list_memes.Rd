@@ -11,5 +11,4 @@ List available memes
 }
 \examples{
 list_memes()
-
 }

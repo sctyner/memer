@@ -9,8 +9,15 @@ get_meme(memename)
 \description{
 Read in the meme you wish to create
 }
+\section{To add a new meme to the data}{
+
+\describe{
+   \item{First} Add the meme to the data folder (png)
+   \item{Then} Add row to the blankmemes data \code{dplyr::add_row(filename = "...", name = "...")}
+   \item{Finally} Run \code{usethis::use_data(blankmemes, overwrite = T)}
+}
+}
+
 \examples{
 get_meme("AllTheThings")
-
-
 }

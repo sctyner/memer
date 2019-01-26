@@ -7,11 +7,13 @@
 #' @importFrom magick image_read
 #' @importFrom readr read_csv
 #'
-#' # to add a new meme to the data:
-#' # add the meme to the data folder (png)
-#' # add row to the blankmemes data dplyr::add_row(filename = "...", name = "...")
-#' # run usethis::use_data(blankmemes, overwrite = T)
-#' #
+#' @section To add a new meme to the data:
+#' \describe{
+#'    \item{First} Add the meme to the data folder (png)
+#'    \item{Then} Add row to the blankmemes data \code{dplyr::add_row(filename = "...", name = "...")}
+#'    \item{Finally} Run \code{usethis::use_data(blankmemes, overwrite = T)}
+#' }
+#'
 get_meme <- function(memename) {
   if (!is.character(memename)) {
     stop("Error: memename must be a character. See list_memes().")
