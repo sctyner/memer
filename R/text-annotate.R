@@ -7,7 +7,6 @@
 #' @examples
 #' get_meme("AllTheThings") %>% top_text("R ALL THE THINGS!")
 #' get_meme("OprahGiveaway") %>% bottom_text("EVERYONE GETS A %>%!!!")
-#'
 #' @importFrom magick image_annotate geometry_point
 #' @inheritDotParams magick::image_annotate -image -text
 #'
@@ -44,7 +43,6 @@ bottom_text <- function(img, txt, ...) {
 #' @examples
 #' get_meme("DistractedBf") %>%
 #'   distbf_text("tidyverse", "new R users", "base R")
-#'
 #' @export
 #'
 distbf_text <- function(img, newgirl, guy, oldgirl, ...) {
