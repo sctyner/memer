@@ -1,18 +1,18 @@
 #' Place text in the meme
 #'
 #'
-#' @param img An image of class \code{magick_image}. See \code{\link[=get_meme]{get_meme()}}.
+#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
 #' @param txt A character string
 #'
 #' @examples
-#' get_meme("AllTheThings") %>% top_text("R ALL THE THINGS!")
-#' get_meme("OprahGiveaway") %>% bottom_text("EVERYONE GETS A %>%!!!")
+#' meme_get("AllTheThings") %>% meme_text_top("R ALL THE THINGS!")
+#' meme_get("OprahGiveaway") %>% meme_text_bottom("EVERYONE GETS A %>%!!!")
 #' @importFrom magick image_annotate geometry_point
 #' @inheritDotParams magick::image_annotate -image -text
 #'
 #' @export
-#' @describeIn top_text Place text in center top of meme
-top_text <- function(img, txt, ...) {
+#' @describeIn meme_text_top Place text in center top of meme
+meme_text_top <- function(img, txt, ...) {
   image_annotate(img, txt,
     font = "Impact",
     color = "white", strokecolor = "black",
@@ -21,8 +21,8 @@ top_text <- function(img, txt, ...) {
 }
 
 #' @export
-#' @describeIn top_text Place text in bottom center of meme
-bottom_text <- function(img, txt, ...) {
+#' @describeIn meme_text_top Place text in bottom center of meme
+meme_text_bottom <- function(img, txt, ...) {
   image_annotate(img, txt,
     font = "Impact",
     color = "white", strokecolor = "black",
@@ -32,7 +32,7 @@ bottom_text <- function(img, txt, ...) {
 
 #' Specialized functions for placing text in memes
 #'
-#' @param img An image of class \code{magick_image}. See \code{\link[=get_meme]{get_meme()}}.
+#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
 #' @param newgirl A character string. Text for the left-most person in the \code{"distractedbf"} meme.
 #' @param guy A character string. Text for the center person in the \code{"distractedbf"} meme.
 #' @param oldgirl A character string. Text for the right-most person in the \code{"distractedbf"} meme.
@@ -41,11 +41,11 @@ bottom_text <- function(img, txt, ...) {
 #' @inheritDotParams magick::image_annotate -image -text
 #'
 #' @examples
-#' get_meme("DistractedBf") %>%
-#'   distbf_text("tidyverse", "new R users", "base R")
+#' meme_get("DistractedBf") %>%
+#'   meme_text_distbf("tidyverse", "new R users", "base R")
 #' @export
-#'
-distbf_text <- function(img, newgirl, guy, oldgirl, ...) {
+#' @describeIn meme_text_distbf Text function for the distracted boyfriend meme.
+meme_text_distbf <- function(img, newgirl, guy, oldgirl, ...) {
   image_annotate(img, newgirl,
     font = "Impact",
     color = "white", strokecolor = "black",
@@ -62,3 +62,28 @@ distbf_text <- function(img, newgirl, guy, oldgirl, ...) {
       gravity = "SouthEast", location = geometry_point(10, 30), size = 44, ...
     )
 }
+
+#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
+#' @param dwayne A character string. Text for the top speech bubble in the \code{"therockdriving"} meme.
+#' @param girl A character string. Text for the other speech bubble in the \code{"therockdriving"} meme.
+#'
+#' @describeIn meme_text_distbf Text function for The Rock driving meme.
+#'
+#' @examples
+#' meme_get("TheRockDriving") %>%
+#'   meme_text_rock("What's your favorite thing to do in R?" , "Write for loops.")
+#' @export
+meme_text_rock <- function(img, dwayne, girl, ...) {
+  image_annotate(img, str_wrap(dwayne,20),
+                 font = "Impact",
+                 color = "black", strokecolor = NA,
+                 gravity = "North", location = geometry_point(90,20), size = 16, ...
+  ) %>%
+    image_annotate(girl,
+                   font = "Impact",
+                   color = "black", strokecolor = NA,
+                   gravity = "Center", location = geometry_point(80,-42), size = 16, ...
+    )
+}
+
+
