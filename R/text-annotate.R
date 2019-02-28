@@ -5,7 +5,7 @@
 #' @param txt A character string
 #'
 #' @examples
-#' meme_get("AllTheThings") %>% meme_text_top("R ALL THE THINGS!")
+#' meme_get("AllTheThings") %>% meme_text_top("GGPLOT ALL THE THINGS!")
 #' meme_get("OprahGiveaway") %>% meme_text_bottom("EVERYONE GETS A %>%!!!")
 #' @importFrom magick image_annotate geometry_point
 #' @inheritDotParams magick::image_annotate -image -text
@@ -87,4 +87,26 @@ meme_text_rock <- function(img, dwayne, girl, ...) {
     )
 }
 
+#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
+#' @param robin A character string. Text for the Robin's speech bubble in the \code{"batmanrobin"} meme.
+#' @param batman A character string. Text for the Batman's speech bubble in the \code{"batmanrobin"} meme.
+#'
+#' @describeIn meme_text_distbf Text function for the Batman slaps Robin meme.
+#'
+#' @examples
+#' meme_get("BatmanRobin") %>%
+#'   meme_text_batman("Hey, I'm Batman!" , "No, you idiot, I'm Batman!")
+#' @export
+meme_text_batman <- function(img, robin, batman, ...) {
+  image_annotate(img, str_wrap(robin,20),
+                 font = "Impact",
+                 color = "black", strokecolor = NULL,
+                 gravity = "NorthWest", location = magick::geometry_point(10,0), size = 20, ...
+  ) %>%
+    image_annotate(str_wrap(batman, 20),
+                   font = "Impact",
+                   color = "black", strokecolor = NULL,
+                   gravity = "NorthEast", location = magick::geometry_point(20,0), size = 20, ...
+    )
+}
 

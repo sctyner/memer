@@ -3,11 +3,14 @@
 \name{meme_text_distbf}
 \alias{meme_text_distbf}
 \alias{meme_text_rock}
+\alias{meme_text_batman}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(img, newgirl, guy, oldgirl, ...)
 
 meme_text_rock(img, dwayne, girl, ...)
+
+meme_text_batman(img, robin, batman, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -40,6 +43,12 @@ for background color that annotation text is rendered on.}
 
 \item{girl}{A character string. Text for the other speech bubble in the \code{"therockdriving"} meme.}
 
+\item{robin}{A character string. Text for the Robin's speech bubble in the \code{"batmanrobin"} meme.}
+
+\item{batman}{A character string. Text for the Batman's speech bubble in the \code{"batmanrobin"} meme.}
+
+\item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
+
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
 }
 \description{
@@ -50,6 +59,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_distbf}: Text function for the distracted boyfriend meme.
 
 \item \code{meme_text_rock}: Text function for The Rock driving meme.
+
+\item \code{meme_text_batman}: Text function for the Batman slaps Robin meme.
 }}
 
 \examples{
@@ -57,4 +68,6 @@ meme_get("DistractedBf") \%>\%
   meme_text_distbf("tidyverse", "new R users", "base R")
 meme_get("TheRockDriving") \%>\%
   meme_text_rock("What's your favorite thing to do in R?" , "Write for loops.")
+meme_get("BatmanRobin") \%>\%
+  meme_text_batman("Hey, I'm Batman!" , "No, you idiot, I'm Batman!")
 }
