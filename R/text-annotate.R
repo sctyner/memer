@@ -38,6 +38,7 @@ meme_text_bottom <- function(img, txt, ...) {
 #' @param oldgirl A character string. Text for the right-most person in the \code{"distractedbf"} meme.
 #'
 #' @importFrom magick image_annotate geometry_point
+#' @importFrom stringr str_wrap
 #' @inheritDotParams magick::image_annotate -image -text
 #'
 #' @examples
@@ -76,12 +77,12 @@ meme_text_distbf <- function(img, newgirl, guy, oldgirl, ...) {
 meme_text_rock <- function(img, dwayne, girl, ...) {
   image_annotate(img, str_wrap(dwayne,20),
                  font = "Impact",
-                 color = "black", strokecolor = NA,
+                 color = "black", strokecolor = NULL,
                  gravity = "North", location = geometry_point(90,20), size = 16, ...
   ) %>%
     image_annotate(girl,
                    font = "Impact",
-                   color = "black", strokecolor = NA,
+                   color = "black", strokecolor = NULL,
                    gravity = "Center", location = geometry_point(80,-42), size = 16, ...
     )
 }
