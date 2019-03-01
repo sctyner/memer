@@ -101,12 +101,32 @@ meme_text_batman <- function(img, robin, batman, ...) {
   image_annotate(img, str_wrap(robin,20),
                  font = "Impact",
                  color = "black", strokecolor = NULL,
-                 gravity = "NorthWest", location = magick::geometry_point(10,0), size = 20, ...
+                 gravity = "NorthWest", location = geometry_point(10,0), size = 20, ...
   ) %>%
     image_annotate(str_wrap(batman, 20),
                    font = "Impact",
                    color = "black", strokecolor = NULL,
-                   gravity = "NorthEast", location = magick::geometry_point(20,0), size = 20, ...
+                   gravity = "NorthEast", location = geometry_point(20,0), size = 20, ...
     )
 }
 
+#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
+#' @param rightpg A character string. Text for the right page in the \code{"trumpbill"} meme.
+#' @param leftpg A character string. Text for the left page in the \code{"trumpbill"} meme.
+#'
+#' @describeIn meme_text_distbf Text function for the Trump "first order of business" meme.
+#'
+#' @examples
+#' meme_get("TrumpBillSigning") %>%
+#'   meme_text_trump("Nonsense", "Stuff and")
+#' @export
+meme_text_trump <- function(img, rightpg, leftpg = "", ...){
+  image_annotate(img, str_wrap(rightpg,20),
+                 font = "Impact", color = "black", strokecolor = NULL,
+                 gravity = "East", location = geometry_point(60,0), size = 20, ...
+  ) %>%
+    image_annotate(str_wrap(leftpg,20),
+                   font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "Center", location = geometry_point(0,0), size = 20, ...
+                   )
+}
