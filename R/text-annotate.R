@@ -118,14 +118,14 @@ meme_text_batman <- function(img, robin, batman, ...) {
 #'
 #' @examples
 #' meme_get("TrumpBillSigning") %>%
-#'   meme_text_trump("Nonsense", "Stuff and")
+#'   meme_text_trump("Stuff and nonsense")
 #' @export
 meme_text_trump <- function(img, rightpg, leftpg = "", ...){
-  image_annotate(img, str_wrap(rightpg,20),
+  image_annotate(img, str_wrap(rightpg,12),
                  font = "Impact", color = "black", strokecolor = NULL,
                  gravity = "East", location = geometry_point(60,0), size = 20, ...
   ) %>%
-    image_annotate(str_wrap(leftpg,20),
+    image_annotate(str_wrap(leftpg,12),
                    font = "Impact", color = "black", strokecolor = NULL,
                    gravity = "Center", location = geometry_point(0,0), size = 20, ...
                    )

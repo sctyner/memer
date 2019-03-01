@@ -82,5 +82,5 @@ meme_get("TheRockDriving") \%>\%
 meme_get("BatmanRobin") \%>\%
   meme_text_batman("Hey, I'm Batman!" , "No, you idiot, I'm Batman!")
 meme_get("TrumpBillSigning") \%>\%
-  meme_text_trump("Nonsense", "Stuff and")
+  meme_text_trump("Stuff and nonsense")
 }
