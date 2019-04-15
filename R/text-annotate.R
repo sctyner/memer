@@ -139,21 +139,20 @@ meme_text_trump <- function(img, rightpg, leftpg = "", ...){
 #' meme_get("IsThisAPigeon") %>%
 #'   meme_text_pigeon("Is this a pigeon?" , "Me", "Not a pigeon")
 #' @export
-meme_text_pigeon <- function(img, isthis, humanoid, butterfly, ...) {
+meme_text_pigeon <- function(img, isthis, humanoid, butterfly, font = "Impact",
+                             color = "white", strokecolor = "black", size = 30, 
+                             ...) {
   image_annotate(img, isthis,
-                 font = "Impact",
-                 color = "white", strokecolor = "black",
-                 gravity = "South", size = 44, ...
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "South", size = size*1.5, ...
   ) %>%
   image_annotate(str_wrap(humanoid,20),
-                 font = "Impact",
-                 color = "white", strokecolor = "black",
-                 gravity = "West", location = geometry_point(160,-60), size = 30, ...
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "West", location = geometry_point(160,-60), size = size, ...
   ) %>%
     image_annotate(str_wrap(butterfly, 20),
-                   font = "Impact",
-                   color = "white", strokecolor = "black",
-                   gravity = "NorthEast", location = geometry_point(100,100), size = 30, ...
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "NorthEast", location = geometry_point(100,100), size = size, ...
     )
 }
 
@@ -174,26 +173,29 @@ meme_text_pigeon <- function(img, isthis, humanoid, butterfly, ...) {
 #'                     "But people who write packages are more important",
 #'                     "NO! All members of the community are valued & deserve respect!")
 #' @export
-meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3, ...){
+meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3, 
+                              font = "Impact", color = "black", strokecolor = NULL,
+                              size = size, ...){
   image_annotate(img, str_wrap(sr1,35),
-                 font = "Impact", color = "white", strokecolor = "black",
-                 gravity = "North", location = geometry_point(5,150), size = 24, ...
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "North", location = geometry_point(5,150), size = size, ...
                  ) %>%
   image_annotate(str_wrap(jr1,35),
-                font = "Impact", color = "white", strokecolor = "black",
-                gravity = "Center", location = geometry_point(0,-110), size = 24, ...
+                 font = font, color = color, strokecolor = strokecolor,
+                gravity = "Center", location = geometry_point(0,-110), size = size, ...
     ) %>%
-    image_annotate(str_wrap(sr2,35), font = "Impact", color = "white", strokecolor = "black",
-                   gravity = "Center", location = geometry_point(0,50), size = 24, ...
+    image_annotate(str_wrap(sr2,35), 
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "Center", location = geometry_point(0,50), size = size, ...
                    ) %>%
     image_annotate(str_wrap(jr2,35),
-                   font = "Impact", color = "white", strokecolor = "black",
-                   gravity = "Center", location = geometry_point(0,250), size = 24, ...
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "Center", location = geometry_point(0,250), size = size, ...
 
     ) %>%
     image_annotate(str_wrap(sr3,35),
-                   font = "Impact", color = "white", strokecolor = "black",
-                   gravity = "South", location = geometry_point(0,0), size = 24, ...
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "South", location = geometry_point(0,0), size = size, ...
                    )
 }
 
@@ -212,21 +214,23 @@ meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3, ...){
 #'                     "text3",
 #'                     "text4")
 #' @export
-meme_text_brain <- function(img, br1, br2, br3, br4, ...){
+meme_text_brain <- function(img, br1, br2, br3, br4, 
+                            font = "Impact", color = "black", strokecolor = NULL,
+                            size = 24, ...){
   image_annotate(img, str_wrap(br1,35),
-                 font = "Impact", color = "black", strokecolor = NULL,
-                 gravity = "NorthWest", location = geometry_point(10,20), size = 24, ...
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "NorthWest", location = geometry_point(10,20), size = size, ...
   ) %>%
     image_annotate(str_wrap(br2,35),
-                   font = "Impact", color = "black", strokecolor = NULL,
-                   gravity = "West", location = geometry_point(10,-130), size = 24, ...
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "West", location = geometry_point(10,-130), size = size, ...
     ) %>%
     image_annotate(str_wrap(br3,35), font = "Impact", color = "black", strokecolor = NULL,
-                   gravity = "West", location = geometry_point(10,40), size = 24, ...
+                   gravity = "West", location = geometry_point(10,40), size = size, ...
     ) %>%
     image_annotate(str_wrap(br4,35),
-                   font = "Impact", color = "black", strokecolor = NULL,
-                   gravity = "SouthWest", location = geometry_point(10,120), size = 24, ...
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "SouthWest", location = geometry_point(10,120), size = size, ...
                    
     )
 }
@@ -242,14 +246,16 @@ meme_text_brain <- function(img, br1, br2, br3, br4, ...){
 #'   meme_text_kermit("Me: Your text here", "Me: Your evil text here")
 #'
 #' @export
-meme_text_kermit <- function(img, good, bad, ...){
+meme_text_kermit <- function(img, good, bad, 
+                             font = "Impact", color = "black", strokecolor = NULL,
+                             size = 20, ...){
   image_annotate(img, str_wrap(good,100),
-                 font = "Impact", color = "black", strokecolor = NULL,
-                 gravity = "NorthWest", location = geometry_point(10,30), size = 20, ...
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "NorthWest", location = geometry_point(10,30), size = size, ...
   ) %>%
     image_annotate(str_wrap(bad,100),
-                   font = "Impact", color = "black", strokecolor = NULL,
-                   gravity = "NorthWest", location = geometry_point(10,100), size = 20, ...
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "NorthWest", location = geometry_point(10,100), size = size, ...
     )
 }
 
@@ -263,14 +269,16 @@ meme_text_kermit <- function(img, good, bad, ...){
 #'   meme_text_buttons("Should I do this?", "Or this?")
 #'
 #' @export
-meme_text_buttons <- function(img, lbtn, rbtn, ...){
+meme_text_buttons <- function(img, lbtn, rbtn, font = "Impact", 
+                              color = "black", strokecolor = NULL, 
+                              size = 18, ...){
   image_annotate(img, str_wrap(lbtn,15), degrees = -15,
-                 font = "Impact", color = "black", strokecolor = NULL,
-                 gravity = "NorthWest", location = geometry_point(30,60), size = 18, ...
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "NorthWest", location = geometry_point(30,60), size = size, ...
   ) %>%
     image_annotate(str_wrap(rbtn, 15), degrees = -10,
-                   font = "Impact", color = "black", strokecolor = NULL,
-                   gravity = "North", location = geometry_point(20,35), size = 18, ...
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "North", location = geometry_point(20,35), size = size, ...
                    )
 }
 
