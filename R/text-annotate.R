@@ -33,9 +33,9 @@ meme_text_bottom <- function(img, txt, ...) {
 #' Specialized functions for placing text in memes
 #'
 #' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
-#' @param newgirl A character string. Text for the left-most person in the \code{"distractedbf"} meme.
-#' @param guy A character string. Text for the center person in the \code{"distractedbf"} meme.
-#' @param oldgirl A character string. Text for the right-most person in the \code{"distractedbf"} meme.
+#' @param newgirl A character string. Text for the left-most person in the \code{"DistractedBf"} meme.
+#' @param guy A character string. Text for the center person in the \code{"DistractedBf"} meme.
+#' @param oldgirl A character string. Text for the right-most person in the \code{"DistractedBf"} meme.
 #'
 #' @importFrom magick image_annotate geometry_point
 #' @importFrom stringr str_wrap

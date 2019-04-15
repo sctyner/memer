@@ -18,11 +18,11 @@ meme_text_trump(img, rightpg, leftpg = "", ...)
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
 
-\item{newgirl}{A character string. Text for the left-most person in the \code{"distractedbf"} meme.}
+\item{newgirl}{A character string. Text for the left-most person in the \code{"DistractedBf"} meme.}
 
-\item{guy}{A character string. Text for the center person in the \code{"distractedbf"} meme.}
+\item{guy}{A character string. Text for the center person in the \code{"DistractedBf"} meme.}
 
-\item{oldgirl}{A character string. Text for the right-most person in the \code{"distractedbf"} meme.}
+\item{oldgirl}{A character string. Text for the right-most person in the \code{"DistractedBf"} meme.}
 
 \item{...}{Arguments passed on to \code{magick::image_annotate}
 \describe{

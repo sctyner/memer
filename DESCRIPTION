@@ -1,16 +1,19 @@
 Package: memer
 Type: Package
-Title: A tidyverse compatible package for creating memes in R using magick.
+Title: A tidyverse compatible package for creating memes in R using magick
 Version: 0.1.0
 Authors@R: c(person("Sam", "Tyner", email = "sctyner90@gmail.com",
                   role = c("aut", "cre")),
            person("Eric", "Hare", email = "ericrhare@gmail.com",
                   role = "aut"))
-Description: TBD
+Description: A tidyverse-friendly package for generating memes in R. The functions are primarily wrappers around functions in the magick package.
 Depends: R (>= 3.4.0)
 Imports:
-    magrittr
+    magrittr,
+    magick, 
+    readr,
+    stringr
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1.9000
+RoxygenNote: 6.1.1

@@ -6,12 +6,13 @@
 #' @export
 #' @importFrom magick image_read
 #' @importFrom readr read_csv
+#' @importFrom utils data
 #'
 #' @section To add a new meme to the data:
 #' \describe{
-#'    \item{First} Add the meme to the data folder (png)
-#'    \item{Then} Add row to the blankmemes data \code{dplyr::add_row(filename = "...", name = "...")}
-#'    \item{Finally} Run \code{usethis::use_data(blankmemes, overwrite = T)}
+#'    \item{First}{Add the meme to the data folder (png)}
+#'    \item{Then}{Add row to the blankmemes data \code{dplyr::add_row(filename = "...", name = "...")}}
+#'    \item{Finally}{Run \code{usethis::use_data(blankmemes, overwrite = T)}}
 #' }
 #'
 meme_get <- function(memename) {
@@ -30,7 +31,7 @@ meme_get <- function(memename) {
 #'
 #'
 #' @examples
-#' list_memes()
+#' meme_list()
 #' @export
 meme_list <- function() {
   data("blankmemes")
