@@ -145,7 +145,7 @@ meme_text_trump <- function(img, rightpg, leftpg = "", font = "Impact",
 #'   meme_text_pigeon("Is this a pigeon?" , "Me", "Not a pigeon")
 #' @export
 meme_text_pigeon <- function(img, isthis, humanoid, butterfly, font = "Impact",
-                             color = "white", strokecolor = "black", size = 30, 
+                             color = "white", strokecolor = "black", size = 30,
                              ...) {
   image_annotate(img, isthis,
                  font = font, color = color, strokecolor = strokecolor,
@@ -178,9 +178,9 @@ meme_text_pigeon <- function(img, isthis, humanoid, butterfly, font = "Impact",
 #'                     "But people who write packages are more important",
 #'                     "NO! All members of the community are valued & deserve respect!")
 #' @export
-meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3, 
-                              font = "Impact", color = "black", strokecolor = NULL,
-                              size = size, ...){
+meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3,
+                              font = "Impact", color = "white", strokecolor = "black",
+                              size = 20, ...){
   image_annotate(img, str_wrap(sr1,35),
                  font = font, color = color, strokecolor = strokecolor,
                  gravity = "North", location = geometry_point(5,150), size = size, ...
@@ -189,7 +189,7 @@ meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3,
                  font = font, color = color, strokecolor = strokecolor,
                 gravity = "Center", location = geometry_point(0,-110), size = size, ...
     ) %>%
-    image_annotate(str_wrap(sr2,35), 
+    image_annotate(str_wrap(sr2,35),
                    font = font, color = color, strokecolor = strokecolor,
                    gravity = "Center", location = geometry_point(0,50), size = size, ...
                    ) %>%
@@ -219,7 +219,7 @@ meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3,
 #'                     "text3",
 #'                     "text4")
 #' @export
-meme_text_brain <- function(img, br1, br2, br3, br4, 
+meme_text_brain <- function(img, br1, br2, br3, br4,
                             font = "Impact", color = "black", strokecolor = NULL,
                             size = 24, ...){
   image_annotate(img, str_wrap(br1,35),
@@ -250,7 +250,7 @@ meme_text_brain <- function(img, br1, br2, br3, br4,
 #'   meme_text_kermit("Me: Your text here", "Me: Your evil text here")
 #'
 #' @export
-meme_text_kermit <- function(img, good, bad, 
+meme_text_kermit <- function(img, good, bad,
                              font = "Impact", color = "black", strokecolor = NULL,
                              size = 20, ...){
   image_annotate(img, str_wrap(good,100),
@@ -273,8 +273,8 @@ meme_text_kermit <- function(img, good, bad,
 #'   meme_text_buttons("Should I do this?", "Or this?")
 #'
 #' @export
-meme_text_buttons <- function(img, lbtn, rbtn, font = "Impact", 
-                              color = "black", strokecolor = NULL, 
+meme_text_buttons <- function(img, lbtn, rbtn, font = "Impact",
+                              color = "black", strokecolor = NULL,
                               size = 18, ...){
   image_annotate(img, str_wrap(lbtn,15), degrees = -15,
                  font = font, color = color, strokecolor = strokecolor,
