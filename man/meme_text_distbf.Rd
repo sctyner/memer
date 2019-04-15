@@ -24,15 +24,20 @@ meme_text_batman(img, robin, batman, font = "Impact", color = "black",
 meme_text_trump(img, rightpg, leftpg = "", font = "Impact",
   color = "black", strokecolor = NULL, size = 20, ...)
 
-meme_text_pigeon(img, isthis, humanoid, butterfly, ...)
+meme_text_pigeon(img, isthis, humanoid, butterfly, font = "Impact",
+  color = "white", strokecolor = "black", size = 30, ...)
 
-meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, ...)
+meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, font = "Impact",
+  color = "black", strokecolor = NULL, size = size, ...)
 
-meme_text_brain(img, br1, br2, br3, br4, ...)
+meme_text_brain(img, br1, br2, br3, br4, font = "Impact",
+  color = "black", strokecolor = NULL, size = 24, ...)
 
-meme_text_kermit(img, good, bad, ...)
+meme_text_kermit(img, good, bad, font = "Impact", color = "black",
+  strokecolor = NULL, size = 20, ...)
 
-meme_text_buttons(img, lbtn, rbtn, ...)
+meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
+  strokecolor = NULL, size = 18, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link{meme_get}}.}

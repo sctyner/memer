@@ -19,5 +19,5 @@ meme_get("DistractedBf") %>%
 
 ```{r oprah, fig.align='center'}
 meme_get("OprahGiveaway") %>% 
-  meme_text_bottom("EVERYONE GETS A %>%!!!")
+  meme_text_bottom("EVERYONE GETS A %>%!!!", size = 36)
 ```

@@ -16,7 +16,7 @@ meme_get("DistractedBf") %>%
 
 ``` r
 meme_get("OprahGiveaway") %>% 
-  meme_text_bottom("EVERYONE GETS A %>%!!!")
+  meme_text_bottom("EVERYONE GETS A %>%!!!", size = 36)
 ```
 
 <img src="README_files/figure-gfm/oprah-1.png" style="display: block; margin: auto;" />
