@@ -32,7 +32,6 @@ meme_text_bottom <- function(img, txt, ...) {
 
 #' Specialized functions for placing text in memes
 #'
-#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
 #' @param newgirl A character string. Text for the left-most person in the \code{"DistractedBf"} meme.
 #' @param guy A character string. Text for the center person in the \code{"DistractedBf"} meme.
 #' @param oldgirl A character string. Text for the right-most person in the \code{"DistractedBf"} meme.
@@ -87,7 +86,6 @@ meme_text_rock <- function(img, dwayne, girl, ...) {
     )
 }
 
-#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
 #' @param robin A character string. Text for the Robin's speech bubble in the \code{"batmanrobin"} meme.
 #' @param batman A character string. Text for the Batman's speech bubble in the \code{"batmanrobin"} meme.
 #'
@@ -110,7 +108,6 @@ meme_text_batman <- function(img, robin, batman, ...) {
     )
 }
 
-#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
 #' @param rightpg A character string. Text for the right page in the \code{"trumpbill"} meme.
 #' @param leftpg A character string. Text for the left page in the \code{"trumpbill"} meme.
 #'

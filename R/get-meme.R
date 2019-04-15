@@ -1,6 +1,8 @@
 #' Read in the meme you wish to create
 #'
 #'
+#' @param memename A character describing the meme to get. See \code{\link{meme_list}}
+#'
 #' @examples
 #' meme_get("AllTheThings")
 #' @export
@@ -19,9 +21,9 @@ meme_get <- function(memename) {
   if (!is.character(memename)) {
     stop("Error: memename must be a character. See meme_list().")
   }
-  data(blankmemes)
-  idx <- which(blankmemes$name == memename)
-  filepath <- paste0("data/", blankmemes$filename[idx])
+
+  idx <- which(memer::blankmemes$name == memename)
+  filepath <- paste0("extdata/", memer::blankmemes$filename[idx])
 
   p <- image_read(system.file(filepath, package = "memer", lib.loc = NULL, mustWork = T))
   return(p)
@@ -34,6 +36,5 @@ meme_get <- function(memename) {
 #' meme_list()
 #' @export
 meme_list <- function() {
-  data("blankmemes")
-  return(blankmemes$name)
+  return(memer::blankmemes$name)
 }
