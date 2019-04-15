@@ -5,6 +5,9 @@
 
 [![Travis build
 status](https://travis-ci.org/sctyner/memer.svg?branch=master)](https://travis-ci.org/sctyner/memer)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/sctyner/memer?branch=master&svg=true)](https://ci.appveyor.com/project/sctyner/memer)
+<!-- badges: end -->
 
 ## Overview
 
