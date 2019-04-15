@@ -12,21 +12,22 @@
 #'
 #' @export
 #' @describeIn meme_text_top Place text in center top of meme
-meme_text_top <- function(img, txt, ...) {
-  image_annotate(img, txt,
-    font = "Impact",
-    color = "white", strokecolor = "black",
-    gravity = "North", size = 44, ...
-  )
+meme_text_top <- function(img, txt, font = "Impact",
+                          color = "white", strokecolor = "black",
+                          gravity = "North", size = 44, ...) {
+  image_annotate(img, txt, font = font,
+                 color = color, strokecolor = strokecolor,
+                 gravity = gravity, size = size, ...)
 }
 
 #' @export
 #' @describeIn meme_text_top Place text in bottom center of meme
-meme_text_bottom <- function(img, txt, ...) {
-  image_annotate(img, txt,
-    font = "Impact",
-    color = "white", strokecolor = "black",
-    gravity = "South", size = 44, ...
+meme_text_bottom <- function(img, txt, font = "Impact",
+                             color = "white", strokecolor = "black",
+                             gravity = "South", size = 44, ...) {
+  image_annotate(img, txt, font = font,
+                 color = color, strokecolor = strokecolor,
+                 gravity = gravity, size = size, ...
   )
 }
 
@@ -45,25 +46,26 @@ meme_text_bottom <- function(img, txt, ...) {
 #'   meme_text_distbf("tidyverse", "new R users", "base R")
 #' @export
 #' @describeIn meme_text_distbf Text function for the distracted boyfriend meme.
-meme_text_distbf <- function(img, newgirl, guy, oldgirl, ...) {
+meme_text_distbf <- function(img, newgirl, guy, oldgirl, font = "Impact",
+                             color = "white", strokecolor = "black", size = 44, ...) {
   image_annotate(img, newgirl,
-    font = "Impact",
-    color = "white", strokecolor = "black",
-    gravity = "SouthWest", location = geometry_point(65, 0), size = 44, ...
+    font = font,
+    color = color, strokecolor = strokecolor,
+    gravity = "SouthWest", location = geometry_point(65, 0), size = size, ...
   ) %>%
     image_annotate(guy,
-      font = "Impact",
-      color = "white", strokecolor = "black",
-      gravity = "Center", location = geometry_point(65, 0), size = 44, ...
+                   font = font,
+                   color = color, strokecolor = strokecolor,
+      gravity = "Center", location = geometry_point(65, 0), size = size, ...
     ) %>%
     image_annotate(oldgirl,
-      font = "Impact",
-      color = "white", strokecolor = "black",
-      gravity = "SouthEast", location = geometry_point(10, 30), size = 44, ...
+                   font = font,
+                   color = color, strokecolor = strokecolor,
+      gravity = "SouthEast", location = geometry_point(10, 30), size = size, ...
     )
 }
 
-#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
+#' @param img An image of class \code{magick_image}. See \code{\link{meme_get}}.
 #' @param dwayne A character string. Text for the top speech bubble in the \code{"therockdriving"} meme.
 #' @param girl A character string. Text for the other speech bubble in the \code{"therockdriving"} meme.
 #'
@@ -73,16 +75,17 @@ meme_text_distbf <- function(img, newgirl, guy, oldgirl, ...) {
 #' meme_get("TheRockDriving") %>%
 #'   meme_text_rock("What's your favorite thing to do in R?" , "Write for loops.")
 #' @export
-meme_text_rock <- function(img, dwayne, girl, ...) {
+meme_text_rock <- function(img, dwayne, girl, font = "Impact",
+                           color = "black", strokecolor = NULL, size = 16, ...) {
   image_annotate(img, str_wrap(dwayne,20),
-                 font = "Impact",
-                 color = "black", strokecolor = NULL,
-                 gravity = "North", location = geometry_point(90,20), size = 16, ...
+                 font = font,
+                 color = color, strokecolor = strokecolor,
+                 gravity = "North", location = geometry_point(90,20), size = size, ...
   ) %>%
     image_annotate(girl,
-                   font = "Impact",
-                   color = "black", strokecolor = NULL,
-                   gravity = "Center", location = geometry_point(80,-42), size = 16, ...
+                   font = font,
+                   color = color, strokecolor = strokecolor,
+                   gravity = "Center", location = geometry_point(80,-42), size = size, ...
     )
 }
 
@@ -95,16 +98,17 @@ meme_text_rock <- function(img, dwayne, girl, ...) {
 #' meme_get("BatmanRobin") %>%
 #'   meme_text_batman("Hey, I'm Batman!" , "No, you idiot, I'm Batman!")
 #' @export
-meme_text_batman <- function(img, robin, batman, ...) {
+meme_text_batman <- function(img, robin, batman, font = "Impact",
+                             color = "black", strokecolor = NULL, size = 20, ...) {
   image_annotate(img, str_wrap(robin,20),
-                 font = "Impact",
-                 color = "black", strokecolor = NULL,
-                 gravity = "NorthWest", location = geometry_point(10,0), size = 20, ...
+                 font = font,
+                 color = color, strokecolor = strokecolor,
+                 gravity = "NorthWest", location = geometry_point(10,0), size = size, ...
   ) %>%
     image_annotate(str_wrap(batman, 20),
-                   font = "Impact",
-                   color = "black", strokecolor = NULL,
-                   gravity = "NorthEast", location = geometry_point(20,0), size = 20, ...
+                   font = font,
+                   color = color, strokecolor = strokecolor,
+                   gravity = "NorthEast", location = geometry_point(20,0), size = size, ...
     )
 }
 
@@ -117,14 +121,15 @@ meme_text_batman <- function(img, robin, batman, ...) {
 #' meme_get("TrumpBillSigning") %>%
 #'   meme_text_trump("Stuff and nonsense")
 #' @export
-meme_text_trump <- function(img, rightpg, leftpg = "", ...){
+meme_text_trump <- function(img, rightpg, leftpg = "", font = "Impact",
+                            color = "black", strokecolor = NULL, size = 20, ...){
   image_annotate(img, str_wrap(rightpg,12),
-                 font = "Impact", color = "black", strokecolor = NULL,
-                 gravity = "East", location = geometry_point(60,0), size = 20, ...
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "East", location = geometry_point(60,0), size = size, ...
                 ) %>%
     image_annotate(str_wrap(leftpg,12),
-                   font = "Impact", color = "black", strokecolor = NULL,
-                   gravity = "Center", location = geometry_point(0,0), size = 20, ...
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "Center", location = geometry_point(0,0), size = size, ...
                    )
 }
 
@@ -227,7 +232,7 @@ meme_text_brain <- function(img, br1, br2, br3, br4, ...){
     image_annotate(str_wrap(br4,35),
                    font = "Impact", color = "black", strokecolor = NULL,
                    gravity = "SouthWest", location = geometry_point(10,120), size = 24, ...
-                   
+
     )
 }
 

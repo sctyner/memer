@@ -12,13 +12,17 @@
 \alias{meme_text_buttons}
 \title{Specialized functions for placing text in memes}
 \usage{
-meme_text_distbf(img, newgirl, guy, oldgirl, ...)
+meme_text_distbf(img, newgirl, guy, oldgirl, font = "Impact",
+  color = "white", strokecolor = "black", size = 44, ...)
 
-meme_text_rock(img, dwayne, girl, ...)
+meme_text_rock(img, dwayne, girl, font = "Impact", color = "black",
+  strokecolor = NULL, size = 16, ...)
 
-meme_text_batman(img, robin, batman, ...)
+meme_text_batman(img, robin, batman, font = "Impact", color = "black",
+  strokecolor = NULL, size = 20, ...)
 
-meme_text_trump(img, rightpg, leftpg = "", ...)
+meme_text_trump(img, rightpg, leftpg = "", font = "Impact",
+  color = "black", strokecolor = NULL, size = 20, ...)
 
 meme_text_pigeon(img, isthis, humanoid, butterfly, ...)
 
@@ -31,7 +35,7 @@ meme_text_ramp(img, straight, exit, ...)
 meme_text_buttons(img, lbtn, rbtn, ...)
 }
 \arguments{
-\item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
+\item{img}{An image of class \code{magick_image}. See \code{\link{meme_get}}.}
 
 \item{newgirl}{A character string. Text for the left-most person in the \code{"DistractedBf"} meme.}
 
