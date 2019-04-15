@@ -6,6 +6,7 @@
 \alias{meme_text_batman}
 \alias{meme_text_trump}
 \alias{meme_text_pigeon}
+\alias{meme_text_chopper}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(img, newgirl, guy, oldgirl, ...)
@@ -17,6 +18,8 @@ meme_text_batman(img, robin, batman, ...)
 meme_text_trump(img, rightpg, leftpg = "", ...)
 
 meme_text_pigeon(img, txt, humanoid, butterfly, ...)
+
+meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -60,6 +63,16 @@ for background color that annotation text is rendered on.}
 \item{humanoid}{A character string. Text for the humanoid in the \code{"IsThisAPigeon"} meme.}
 
 \item{butterfly}{A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.}
+
+\item{sr1}{A character string. Text for the first panel.}
+
+\item{jr1}{A character string. Text for the second panel.}
+
+\item{sr2}{A character string. Text for the third panel.}
+
+\item{jr2}{A character string. Text for the fourth panel.}
+
+\item{sr3}{A character string. Text for the fifth panel.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -75,6 +88,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_trump}: Text function for the Trump "first order of business" meme.
 
 \item \code{meme_text_pigeon}: Text function for the Is this a pigeon? meme.
+
+\item \code{meme_text_chopper}: Text function for the American Chopper Senior vs. Junior fight meme.
 }}
 
 \examples{
@@ -88,4 +103,10 @@ meme_get("TrumpBillSigning") \%>\%
   meme_text_trump("Stuff and nonsense")
 meme_get("IsThisAPigeon") \%>\%
   meme_text_pigeon("Is this a pigeon?" , "Me", "Not a pigeon")
+meme_get("AmericanChopper") \%>\%
+  meme_text_chopper("Stop calling yourself 'just an R user'!",
+                    "But I've never written a package!",
+                    "So?? You're still an important part of the community!",
+                    "But people who write packages are more important",
+                    "NO! All members of the community are valued & deserve respect!")
 }
