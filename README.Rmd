@@ -7,9 +7,23 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## `memer`
+# memer  <img src="man/figures/logo.png" align="right" width="120" />
 
-A `tidyverse`-compatible `R` package for creating memes. Mostly wrappers around `magick` functions. 
+
+## Overview
+
+memer is a a `tidyverse`-compatible `R` package for creating memes. Mostly wrappers around `magick` functions. 
+
+## Installation
+
+```{r, eval = FALSE}
+# Install the development version from GitHub:
+# install.packages("devtools")
+devtools::install_github("styner/memer")
+```
+
+
+## Usage
 
 ```{r cdistbf, fig.align='center'}
 library(memer)
