@@ -197,6 +197,41 @@ meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3, ...){
                    )
 }
 
+
+#' @param br1 A character string. Text for the first panel.
+#' @param br2 A character string. Text for the second panel.
+#' @param br3 A character string. Text for the third panel.
+#' @param br4 A character string. Text for the fourth panel.
+#'
+#' @describeIn meme_text_distbf Text function for the expanding brain meme.
+#'
+#' @examples
+#' meme_get("ExpandingBrain") %>%
+#'   meme_text_brain("text1",
+#'                     "text2",
+#'                     "text3",
+#'                     "text4")
+#' @export
+meme_text_brain <- function(img, br1, br2, br3, br4, ...){
+  image_annotate(img, str_wrap(br1,35),
+                 font = "Impact", color = "black", strokecolor = NULL,
+                 gravity = "NorthWest", location = geometry_point(10,20), size = 24, ...
+  ) %>%
+    image_annotate(str_wrap(br2,35),
+                   font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "West", location = geometry_point(10,-130), size = 24, ...
+    ) %>%
+    image_annotate(str_wrap(br3,35), font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "West", location = geometry_point(10,40), size = 24, ...
+    ) %>%
+    image_annotate(str_wrap(br4,35),
+                   font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "SouthWest", location = geometry_point(10,120), size = 24, ...
+                   
+    )
+}
+
+
 #' @param straight A character string. A good idea.
 #' @param exit A character string. A tempting, bad idea.
 #'

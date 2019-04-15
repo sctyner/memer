@@ -7,6 +7,7 @@
 \alias{meme_text_trump}
 \alias{meme_text_pigeon}
 \alias{meme_text_chopper}
+\alias{meme_text_brain}
 \alias{meme_text_ramp}
 \alias{meme_text_buttons}
 \title{Specialized functions for placing text in memes}
@@ -22,6 +23,8 @@ meme_text_trump(img, rightpg, leftpg = "", ...)
 meme_text_pigeon(img, isthis, humanoid, butterfly, ...)
 
 meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, ...)
+
+meme_text_brain(img, br1, br2, br3, br4, ...)
 
 meme_text_ramp(img, straight, exit, ...)
 
@@ -82,6 +85,14 @@ for background color that annotation text is rendered on.}
 
 \item{sr3}{A character string. Text for the fifth panel.}
 
+\item{br1}{A character string. Text for the first panel.}
+
+\item{br2}{A character string. Text for the second panel.}
+
+\item{br3}{A character string. Text for the third panel.}
+
+\item{br4}{A character string. Text for the fourth panel.}
+
 \item{straight}{A character string. A good idea.}
 
 \item{exit}{A character string. A tempting, bad idea.}
@@ -107,6 +118,8 @@ Specialized functions for placing text in memes
 
 \item \code{meme_text_chopper}: Text function for the American Chopper Senior vs. Junior fight meme.
 
+\item \code{meme_text_brain}: Text function for the expanding brain meme.
+
 \item \code{meme_text_ramp}: Text function for the Off Ramp meme.
 
 \item \code{meme_text_buttons}: Text function for the Two Buttons Anxiety meme.
@@ -129,6 +142,11 @@ meme_get("AmericanChopper") \%>\%
                     "So?? You're still an important part of the community!",
                     "But people who write packages are more important",
                     "NO! All members of the community are valued & deserve respect!")
+meme_get("ExpandingBrain") \%>\%
+  meme_text_brain("text1",
+                    "text2",
+                    "text3",
+                    "text4")
 meme_get("OffRamp") \%>\%
   meme_text_ramp("Commenting my code", "Doing nothing")
 
