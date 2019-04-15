@@ -8,6 +8,7 @@
 \alias{meme_text_pigeon}
 \alias{meme_text_chopper}
 \alias{meme_text_brain}
+\alias{meme_text_ramp}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(img, newgirl, guy, oldgirl, ...)
@@ -23,6 +24,8 @@ meme_text_pigeon(img, txt, humanoid, butterfly, ...)
 meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, ...)
 
 meme_text_brain(img, br1, br2, br3, br4, ...)
+
+meme_text_ramp(img, straight, exit, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -84,6 +87,10 @@ for background color that annotation text is rendered on.}
 \item{br3}{A character string. Text for the third panel.}
 
 \item{br4}{A character string. Text for the fourth panel.}
+
+\item{straight}{A character string. A good idea.}
+
+\item{exit}{A character string. A tempting, bad idea.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -103,6 +110,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_chopper}: Text function for the American Chopper Senior vs. Junior fight meme.
 
 \item \code{meme_text_brain}: Text function for the expanding brain meme.
+
+\item \code{meme_text_ramp}: Text function for the Off Ramp meme.
 }}
 
 \examples{
@@ -127,4 +136,7 @@ meme_get("ExpandingBrain") \%>\%
                     "text2",
                     "text3",
                     "text4")
+meme_get("OffRamp") \%>\%
+  meme_text_ramp("Commenting my code", "Doing nothing")
+
 }
