@@ -6,6 +6,9 @@
 \usage{
 meme_get(memename)
 }
+\arguments{
+\item{memename}{A character describing the meme to get. See \code{\link{meme_list}}}
+}
 \description{
 Read in the meme you wish to create
 }

@@ -53,12 +53,6 @@ for background color that annotation text is rendered on.}
 \item{rightpg}{A character string. Text for the right page in the \code{"trumpbill"} meme.}
 
 \item{leftpg}{A character string. Text for the left page in the \code{"trumpbill"} meme.}
-
-\item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
-
-\item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
-
-\item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
 }
 \description{
 Specialized functions for placing text in memes
