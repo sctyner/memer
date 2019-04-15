@@ -10,7 +10,7 @@ meme_text_top(img, txt, ...)
 meme_text_bottom(img, txt, ...)
 }
 \arguments{
-\item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
+\item{img}{An image of class \code{magick_image}. See \code{\link{meme_get}}.}
 
 \item{txt}{A character string}
 

@@ -9,6 +9,7 @@
 \alias{meme_text_chopper}
 \alias{meme_text_brain}
 \alias{meme_text_ramp}
+\alias{meme_text_buttons}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(img, newgirl, guy, oldgirl, ...)
@@ -19,13 +20,15 @@ meme_text_batman(img, robin, batman, ...)
 
 meme_text_trump(img, rightpg, leftpg = "", ...)
 
-meme_text_pigeon(img, txt, humanoid, butterfly, ...)
+meme_text_pigeon(img, isthis, humanoid, butterfly, ...)
 
 meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, ...)
 
 meme_text_brain(img, br1, br2, br3, br4, ...)
 
 meme_text_ramp(img, straight, exit, ...)
+
+meme_text_buttons(img, lbtn, rbtn, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -66,6 +69,8 @@ for background color that annotation text is rendered on.}
 
 \item{leftpg}{A character string. Text for the left page in the \code{"trumpbill"} meme.}
 
+\item{isthis}{A character string. Text for the question in the \code{"IsThisAPigeon"} meme.}
+
 \item{humanoid}{A character string. Text for the humanoid in the \code{"IsThisAPigeon"} meme.}
 
 \item{butterfly}{A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.}
@@ -91,6 +96,10 @@ for background color that annotation text is rendered on.}
 \item{straight}{A character string. A good idea.}
 
 \item{exit}{A character string. A tempting, bad idea.}
+
+\item{lbtn}{A character string. The left button.}
+
+\item{rbtn}{A character string. The right button.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -112,6 +121,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_brain}: Text function for the expanding brain meme.
 
 \item \code{meme_text_ramp}: Text function for the Off Ramp meme.
+
+\item \code{meme_text_buttons}: Text function for the Two Buttons Anxiety meme.
 }}
 
 \examples{
@@ -138,5 +149,8 @@ meme_get("ExpandingBrain") \%>\%
                     "text4")
 meme_get("OffRamp") \%>\%
   meme_text_ramp("Commenting my code", "Doing nothing")
+
+meme_get("TwoButtonsAnxiety") \%>\%
+  meme_text_buttons("Should I do this?", "Or this?")
 
 }
