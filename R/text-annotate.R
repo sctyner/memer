@@ -231,23 +231,23 @@ meme_text_brain <- function(img, br1, br2, br3, br4, ...){
 }
 
 
-#' @param straight A character string. A good idea.
-#' @param exit A character string. A tempting, bad idea.
+#' @param good A character string. A good idea.
+#' @param dark A character string. A tempting, bad idea.
 #'
 #' @describeIn meme_text_distbf Text function for the Off Ramp meme.
 #'
 #' @examples
-#' meme_get("OffRamp") %>%
-#'   meme_text_ramp("Commenting my code", "Doing nothing")
+#' meme_get("EvilKermit") %>%
+#'   meme_text_kermit("Me: Your text here", "Me: Your evil text here")
 #'
 #' @export
-meme_text_ramp <- function(img, straight, exit, ...){
-  image_annotate(img, str_wrap(straight,10),
-                 font = "Impact", color = "white", strokecolor = "black",
-                 gravity = "North", location = geometry_point(-80,80), size = 20, ...
+meme_text_kermit <- function(img, good, bad, ...){
+  image_annotate(img, str_wrap(good,100),
+                 font = "Impact", color = "black", strokecolor = NULL,
+                 gravity = "NorthWest", location = geometry_point(10,30), size = 20, ...
   ) %>%
-    image_annotate(str_wrap(exit,15),
-                   font = "Impact", color = "white", strokecolor = "black",
-                   gravity = "North", location = geometry_point(45,95), size = 20, ...
+    image_annotate(str_wrap(bad,100),
+                   font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "NorthWest", location = geometry_point(10,100), size = 20, ...
     )
 }
