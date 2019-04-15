@@ -1,7 +1,7 @@
 #' Place text in the meme
 #'
 #'
-#' @param img An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.
+#' @param img An image of class \code{magick_image}. See \code{\link{meme_get}}.
 #' @param txt A character string
 #'
 #' @examples
@@ -129,6 +129,7 @@ meme_text_trump <- function(img, rightpg, leftpg = "", ...){
 }
 
 
+#' @param isthis A character string. Text for the question in the \code{"IsThisAPigeon"} meme.
 #' @param humanoid A character string. Text for the humanoid in the \code{"IsThisAPigeon"} meme.
 #' @param butterfly A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.
 #'
@@ -138,12 +139,12 @@ meme_text_trump <- function(img, rightpg, leftpg = "", ...){
 #' meme_get("IsThisAPigeon") %>%
 #'   meme_text_pigeon("Is this a pigeon?" , "Me", "Not a pigeon")
 #' @export
-meme_text_pigeon <- function(img, txt, humanoid, butterfly, ...) {
-  image_annotate(img, txt,
+meme_text_pigeon <- function(img, isthis, humanoid, butterfly, ...) {
+  image_annotate(img, isthis,
                  font = "Impact",
                  color = "white", strokecolor = "black",
                  gravity = "South", size = 44, ...
-  ) %>% 
+  ) %>%
   image_annotate(str_wrap(humanoid,20),
                  font = "Impact",
                  color = "white", strokecolor = "black",
@@ -216,3 +217,26 @@ meme_text_ramp <- function(img, straight, exit, ...){
                    gravity = "North", location = geometry_point(45,95), size = 20, ...
     )
 }
+
+#' @param lbtn A character string. The left button.
+#' @param rbtn A character string. The right button.
+#'
+#' @describeIn  meme_text_distbf Text function for the Two Buttons Anxiety meme.
+#'
+#' @examples
+#' meme_get("TwoButtonsAnxiety") %>%
+#'   meme_text_buttons("Should I do this?", "Or this?")
+#'
+#' @export
+meme_text_buttons <- function(img, lbtn, rbtn, ...){
+  image_annotate(img, str_wrap(lbtn,15), degrees = -15,
+                 font = "Impact", color = "black", strokecolor = NULL,
+                 gravity = "NorthWest", location = geometry_point(30,60), size = 18, ...
+  ) %>%
+    image_annotate(str_wrap(rbtn, 15), degrees = -10,
+                   font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "North", location = geometry_point(20,35), size = 18, ...
+                   )
+}
+
+
