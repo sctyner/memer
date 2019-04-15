@@ -16,3 +16,8 @@ library(memer)
 meme_get("DistractedBf") %>% 
   meme_text_distbf("tidyverse", "new R users", "base R")
 ```
+
+```{r oprah, fig.align='center'}
+meme_get("OprahGiveaway") %>% 
+  meme_text_bottom("EVERYONE GETS A %>%!!!")
+```
