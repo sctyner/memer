@@ -4,7 +4,7 @@ Title: A tidyverse compatible package for creating memes in R using magick
 Version: 0.1.0
 Authors@R: c(person("Sam", "Tyner", email = "sctyner90@gmail.com",
                   role = c("aut", "cre")),
-           person("Eric", "Hare", email = "ericrhare@gmail.com",
+           person("Haley", "Jeppson", email = "hjeppson@iastate.edu",
                   role = "aut"))
 Description: A tidyverse-friendly package for generating memes in R. The functions are primarily wrappers around functions in the magick package.
 Depends: R (>= 3.4.0)

@@ -105,13 +105,17 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>meme_text_distbf</span>(<span class='no'>img</span>, <span class='no'>newgirl</span>, <span class='no'>guy</span>, <span class='no'>oldgirl</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>meme_text_distbf</span>(<span class='no'>img</span>, <span class='no'>newgirl</span>, <span class='no'>guy</span>, <span class='no'>oldgirl</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>,
+  <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"white"</span>, <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='st'>"black"</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>44</span>, <span class='no'>...</span>)
 
-<span class='fu'>meme_text_rock</span>(<span class='no'>img</span>, <span class='no'>dwayne</span>, <span class='no'>girl</span>, <span class='no'>...</span>)
+<span class='fu'>meme_text_rock</span>(<span class='no'>img</span>, <span class='no'>dwayne</span>, <span class='no'>girl</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>,
+  <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>16</span>, <span class='no'>...</span>)
 
-<span class='fu'>meme_text_batman</span>(<span class='no'>img</span>, <span class='no'>robin</span>, <span class='no'>batman</span>, <span class='no'>...</span>)
+<span class='fu'>meme_text_batman</span>(<span class='no'>img</span>, <span class='no'>robin</span>, <span class='no'>batman</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>,
+  <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>20</span>, <span class='no'>...</span>)
 
-<span class='fu'>meme_text_trump</span>(<span class='no'>img</span>, <span class='no'>rightpg</span>, <span class='kw'>leftpg</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='no'>...</span>)
+<span class='fu'>meme_text_trump</span>(<span class='no'>img</span>, <span class='no'>rightpg</span>, <span class='kw'>leftpg</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>,
+  <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>, <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>20</span>, <span class='no'>...</span>)
 
 <span class='fu'>meme_text_pigeon</span>(<span class='no'>img</span>, <span class='no'>isthis</span>, <span class='no'>humanoid</span>, <span class='no'>butterfly</span>, <span class='no'>...</span>)
 
@@ -128,7 +132,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>img</th>
-      <td><p>An image of class <code>magick_image</code>. See <code><a href='meme_get.html'>meme_get()</a></code>.</p></td>
+      <td><p>An image of class <code>magick_image</code>. See <code><a href='meme_get.html'>meme_get</a></code>.</p></td>
     </tr>
     <tr>
       <th>newgirl</th>
@@ -268,51 +272,51 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"DistractedBf"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>meme_text_distbf</span>(<span class='st'>"tidyverse"</span>, <span class='st'>"new R users"</span>, <span class='st'>"base R"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+  <span class='fu'>meme_text_distbf</span>(<span class='st'>"tidyverse"</span>, <span class='st'>"new R users"</span>, <span class='st'>"base R"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      500    333 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"TheRockDriving"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>meme_text_rock</span>(<span class='st'>"What's your favorite thing to do in R?"</span> , <span class='st'>"Write for loops."</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      500    333 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"TheRockDriving"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_rock</span>(<span class='st'>"What's your favorite thing to do in R?"</span> , <span class='st'>"Write for loops."</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      351    432 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"BatmanRobin"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>meme_text_batman</span>(<span class='st'>"Hey, I'm Batman!"</span> , <span class='st'>"No, you idiot, I'm Batman!"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      351    432 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"BatmanRobin"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_batman</span>(<span class='st'>"Hey, I'm Batman!"</span> , <span class='st'>"No, you idiot, I'm Batman!"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      400    387 sRGB       TRUE         0 72x72  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"TrumpBillSigning"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>meme_text_trump</span>(<span class='st'>"Stuff and nonsense"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      400    387 sRGB       TRUE         0 72x72  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"TrumpBillSigning"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_trump</span>(<span class='st'>"Stuff and nonsense"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      500    410 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"IsThisAPigeon"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>meme_text_pigeon</span>(<span class='st'>"Is this a pigeon?"</span> , <span class='st'>"Me"</span>, <span class='st'>"Not a pigeon"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      500    410 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"IsThisAPigeon"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_pigeon</span>(<span class='st'>"Is this a pigeon?"</span> , <span class='st'>"Me"</span>, <span class='st'>"Not a pigeon"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      700    395 sRGB       TRUE         0 72x72  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"AmericanChopper"</span>) <span class='kw'>%&gt;%</span>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      700    395 sRGB       TRUE         0 72x72  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"AmericanChopper"</span>) <span class='kw'>%&gt;%</span>
   <span class='fu'>meme_text_chopper</span>(<span class='st'>"Stop calling yourself 'just an R user'!"</span>,
                     <span class='st'>"But I've never written a package!"</span>,
                     <span class='st'>"So?? You're still an important part of the community!"</span>,
                     <span class='st'>"But people who write packages are more important"</span>,
-                    <span class='st'>"NO! All members of the community are valued &amp; deserve respect!"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+                    <span class='st'>"NO! All members of the community are valued &amp; deserve respect!"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      356   1000 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"ExpandingBrain"</span>) <span class='kw'>%&gt;%</span>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      356   </span><span style='text-decoration: underline;'>1</span><span>000 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"ExpandingBrain"</span>) <span class='kw'>%&gt;%</span>
   <span class='fu'>meme_text_brain</span>(<span class='st'>"text1"</span>,
                     <span class='st'>"text2"</span>,
                     <span class='st'>"text3"</span>,
-                    <span class='st'>"text4"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+                    <span class='st'>"text4"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      500    701 sRGB       TRUE         0 72x72  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"EvilKermit"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>meme_text_kermit</span>(<span class='st'>"Me: Your text here"</span>, <span class='st'>"Me: Your evil text here"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      500    701 sRGB       TRUE         0 72x72  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"EvilKermit"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_kermit</span>(<span class='st'>"Me: Your text here"</span>, <span class='st'>"Me: Your evil text here"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      600    516 sRGB       TRUE         0 72x72  </div><div class='input'>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      600    516 sRGB       TRUE         0 72x72  </div><div class='input'>
 <span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"TwoButtonsAnxiety"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>meme_text_buttons</span>(<span class='st'>"Should I do this?"</span>, <span class='st'>"Or this?"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+  <span class='fu'>meme_text_buttons</span>(<span class='st'>"Should I do this?"</span>, <span class='st'>"Or this?"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   format width height colorspace matte filesize density
-#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      333    504 sRGB       TRUE         0 28x28  </div><div class='input'>
-</div></pre>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      333    504 sRGB       TRUE         0 28x28  </div><div class='input'>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -329,7 +333,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Sam Tyner, Eric Hare.</p>
+  <p>Developed by Sam Tyner, Haley Jeppson.</p>
 </div>
 
 <div class="pkgdown">

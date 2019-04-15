@@ -5,9 +5,11 @@
 \alias{meme_text_bottom}
 \title{Place text in the meme}
 \usage{
-meme_text_top(img, txt, ...)
+meme_text_top(img, txt, font = "Impact", color = "white",
+  strokecolor = "black", gravity = "North", size = 44, ...)
 
-meme_text_bottom(img, txt, ...)
+meme_text_bottom(img, txt, font = "Impact", color = "white",
+  strokecolor = "black", gravity = "South", size = 44, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link{meme_get}}.}
