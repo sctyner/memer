@@ -148,9 +148,9 @@ meme_get("IsThisAPigeon") \%>\%
 meme_get("AmericanChopper") \%>\%
   meme_text_chopper("Stop calling yourself 'just an R user'!",
                     "But I've never written a package!",
-                    "So?? You're still an important part of the community!",
+                    "So?? You're still an important part of the R community!",
                     "But people who write packages are more important",
-                    "NO! All members of the community are valued & deserve respect!")
+                    "NO! All members of the R community are valued & deserve respect!")
 meme_get("ExpandingBrain") \%>\%
   meme_text_brain("text1",
                     "text2",
