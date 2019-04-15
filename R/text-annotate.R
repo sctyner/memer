@@ -128,6 +128,35 @@ meme_text_trump <- function(img, rightpg, leftpg = "", ...){
                    )
 }
 
+
+#' @param humanoid A character string. Text for the humanoid in the \code{"IsThisAPigeon"} meme.
+#' @param butterfly A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.
+#'
+#' @describeIn meme_text_distbf Text function for the Is this a pigeon? meme.
+#'
+#' @examples
+#' meme_get("IsThisAPigeon") %>%
+#'   meme_text_pigeon("Is this a pigeon?" , "Me", "Not a pigeon")
+#' @export
+meme_text_pigeon <- function(img, txt, humanoid, butterfly, ...) {
+  image_annotate(img, txt,
+                 font = "Impact",
+                 color = "white", strokecolor = "black",
+                 gravity = "South", size = 44, ...
+  ) %>% 
+  image_annotate(str_wrap(humanoid,20),
+                 font = "Impact",
+                 color = "white", strokecolor = "black",
+                 gravity = "West", location = geometry_point(160,-60), size = 30, ...
+  ) %>%
+    image_annotate(str_wrap(butterfly, 20),
+                   font = "Impact",
+                   color = "white", strokecolor = "black",
+                   gravity = "NorthEast", location = geometry_point(100,100), size = 30, ...
+    )
+}
+
+
 #' @param sr1 A character string. Text for the first panel.
 #' @param jr1 A character string. Text for the second panel.
 #' @param sr2 A character string. Text for the third panel.

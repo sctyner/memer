@@ -1,0 +1,4 @@
+destination: docs
+template:
+  params:
+    bootswatch: sandstone # or choose another

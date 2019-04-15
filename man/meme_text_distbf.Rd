@@ -5,6 +5,7 @@
 \alias{meme_text_rock}
 \alias{meme_text_batman}
 \alias{meme_text_trump}
+\alias{meme_text_pigeon}
 \alias{meme_text_chopper}
 \alias{meme_text_ramp}
 \title{Specialized functions for placing text in memes}
@@ -16,6 +17,8 @@ meme_text_rock(img, dwayne, girl, ...)
 meme_text_batman(img, robin, batman, ...)
 
 meme_text_trump(img, rightpg, leftpg = "", ...)
+
+meme_text_pigeon(img, txt, humanoid, butterfly, ...)
 
 meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, ...)
 
@@ -60,6 +63,10 @@ for background color that annotation text is rendered on.}
 
 \item{leftpg}{A character string. Text for the left page in the \code{"trumpbill"} meme.}
 
+\item{humanoid}{A character string. Text for the humanoid in the \code{"IsThisAPigeon"} meme.}
+
+\item{butterfly}{A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.}
+
 \item{sr1}{A character string. Text for the first panel.}
 
 \item{jr1}{A character string. Text for the second panel.}
@@ -87,6 +94,8 @@ Specialized functions for placing text in memes
 
 \item \code{meme_text_trump}: Text function for the Trump "first order of business" meme.
 
+\item \code{meme_text_pigeon}: Text function for the Is this a pigeon? meme.
+
 \item \code{meme_text_chopper}: Text function for the American Chopper Senior vs. Junior fight meme.
 
 \item \code{meme_text_ramp}: Text function for the Off Ramp meme.
@@ -101,6 +110,8 @@ meme_get("BatmanRobin") \%>\%
   meme_text_batman("Hey, I'm Batman!" , "No, you idiot, I'm Batman!")
 meme_get("TrumpBillSigning") \%>\%
   meme_text_trump("Stuff and nonsense")
+meme_get("IsThisAPigeon") \%>\%
+  meme_text_pigeon("Is this a pigeon?" , "Me", "Not a pigeon")
 meme_get("AmericanChopper") \%>\%
   meme_text_chopper("Stop calling yourself 'just an R user'!",
                     "But I've never written a package!",
