@@ -174,9 +174,9 @@ meme_text_pigeon <- function(img, isthis, humanoid, butterfly, font = "Impact",
 #' meme_get("AmericanChopper") %>%
 #'   meme_text_chopper("Stop calling yourself 'just an R user'!",
 #'                     "But I've never written a package!",
-#'                     "So?? You're still an important part of the community!",
+#'                     "So?? You're still an important part of the R community!",
 #'                     "But people who write packages are more important",
-#'                     "NO! All members of the community are valued & deserve respect!")
+#'                     "NO! All members of the R community are valued & deserve respect!")
 #' @export
 meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3,
                               font = "Impact", color = "white", strokecolor = "black",

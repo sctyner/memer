@@ -3,6 +3,11 @@ README
 
 # memer <img src="man/figures/logo.png" align="right" width="120" />
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.org/sctyner/memer.svg?branch=master)](https://travis-ci.org/sctyner/memer)
+
 ## Overview
 
 memer is a a `tidyverse`-compatible `R` package for creating memes.
@@ -37,9 +42,9 @@ meme_get("OprahGiveaway") %>%
 meme_get("AmericanChopper") %>%
   meme_text_chopper("Stop calling yourself 'just an R user'!",
                     "But I've never written a package!",
-                    "So?? You're still an important part of the community!",
+                    "So?? You're still an important part of the R community!",
                     "But people who write packages are more important",
-                    "NO! All members of the community are valued & deserve respect!")
+                    "NO! All members of the R community are valued & deserve respect!")
 ```
 
 <img src="README_files/figure-gfm/chopper-1.png" width="40%" style="display: block; margin: auto;" />
