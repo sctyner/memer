@@ -121,12 +121,13 @@ meme_text_trump <- function(img, rightpg, leftpg = "", ...){
   image_annotate(img, str_wrap(rightpg,12),
                  font = "Impact", color = "black", strokecolor = NULL,
                  gravity = "East", location = geometry_point(60,0), size = 20, ...
-  ) %>%
+                ) %>%
     image_annotate(str_wrap(leftpg,12),
                    font = "Impact", color = "black", strokecolor = NULL,
                    gravity = "Center", location = geometry_point(0,0), size = 20, ...
                    )
 }
+
 
 #' @param humanoid A character string. Text for the humanoid in the \code{"IsThisAPigeon"} meme.
 #' @param butterfly A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.
@@ -154,3 +155,45 @@ meme_text_pigeon <- function(img, txt, humanoid, butterfly, ...) {
                    gravity = "NorthEast", location = geometry_point(100,100), size = 30, ...
     )
 }
+
+
+#' @param sr1 A character string. Text for the first panel.
+#' @param jr1 A character string. Text for the second panel.
+#' @param sr2 A character string. Text for the third panel.
+#' @param jr2 A character string. Text for the fourth panel.
+#' @param sr3 A character string. Text for the fifth panel.
+#'
+#' @describeIn meme_text_distbf Text function for the American Chopper Senior vs. Junior fight meme.
+#'
+#' @examples
+#' meme_get("AmericanChopper") %>%
+#'   meme_text_chopper("Stop calling yourself 'just an R user'!",
+#'                     "But I've never written a package!",
+#'                     "So?? You're still an important part of the community!",
+#'                     "But people who write packages are more important",
+#'                     "NO! All members of the community are valued & deserve respect!")
+#' @export
+meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3, ...){
+  image_annotate(img, str_wrap(sr1,35),
+                 font = "Impact", color = "white", strokecolor = "black",
+                 gravity = "North", location = geometry_point(5,150), size = 24, ...
+                 ) %>%
+  image_annotate(str_wrap(jr1,35),
+                font = "Impact", color = "white", strokecolor = "black",
+                gravity = "Center", location = geometry_point(0,-110), size = 24, ...
+    ) %>%
+    image_annotate(str_wrap(sr2,35), font = "Impact", color = "white", strokecolor = "black",
+                   gravity = "Center", location = geometry_point(0,50), size = 24, ...
+                   ) %>%
+    image_annotate(str_wrap(jr2,35),
+                   font = "Impact", color = "white", strokecolor = "black",
+                   gravity = "Center", location = geometry_point(0,250), size = 24, ...
+
+    ) %>%
+    image_annotate(str_wrap(sr3,35),
+                   font = "Impact", color = "white", strokecolor = "black",
+                   gravity = "South", location = geometry_point(0,0), size = 24, ...
+                   )
+}
+
+
