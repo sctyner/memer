@@ -1,6 +1,8 @@
 README
 ================
 
+# memer <img src="man/figures/logo.png" align="right" width="120" />
+
 <!-- badges: start -->
 
 [![Travis build
@@ -9,16 +11,20 @@ status](https://travis-ci.org/sctyner/memer.svg?branch=master)](https://travis-c
 status](https://ci.appveyor.com/api/projects/status/github/sctyner/memer?branch=master&svg=true)](https://ci.appveyor.com/project/sctyner/memer)
 <!-- badges: end -->
 
-## `memer`
+## Overview
 
-A `tidyverse`-compatible `R` package for creating memes. The package is
-mostly wrappers around `magick` functions.
+memer is a a `tidyverse`-compatible `R` package for creating memes.
+Mostly wrappers around `magick` functions.
 
-To install `memer`:
+## Installation
 
 ``` r
-devtools::install_github("sctyner/memer")
+# Install the development version from GitHub:
+# install.packages("devtools")
+devtools::install_github("styner/memer")
 ```
+
+## Usage
 
 ``` r
 library(memer)
