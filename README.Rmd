@@ -7,6 +7,10 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/sctyner/memer.svg?branch=master)](https://travis-ci.org/sctyner/memer)
+<!-- badges: end -->
+
 ## `memer`
 
 A `tidyverse`-compatible `R` package for creating memes. Mostly wrappers around `magick` functions. 
