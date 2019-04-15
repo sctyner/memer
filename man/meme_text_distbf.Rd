@@ -6,6 +6,7 @@
 \alias{meme_text_batman}
 \alias{meme_text_trump}
 \alias{meme_text_chopper}
+\alias{meme_text_ramp}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(img, newgirl, guy, oldgirl, ...)
@@ -17,6 +18,8 @@ meme_text_batman(img, robin, batman, ...)
 meme_text_trump(img, rightpg, leftpg = "", ...)
 
 meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, ...)
+
+meme_text_ramp(img, straight, exit, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -66,6 +69,10 @@ for background color that annotation text is rendered on.}
 \item{jr2}{A character string. Text for the fourth panel.}
 
 \item{sr3}{A character string. Text for the fifth panel.}
+
+\item{straight}{A character string. A good idea.}
+
+\item{exit}{A character string. A tempting, bad idea.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -81,6 +88,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_trump}: Text function for the Trump "first order of business" meme.
 
 \item \code{meme_text_chopper}: Text function for the American Chopper Senior vs. Junior fight meme.
+
+\item \code{meme_text_ramp}: Text function for the Off Ramp meme.
 }}
 
 \examples{
@@ -98,4 +107,7 @@ meme_get("AmericanChopper") \%>\%
                     "So?? You're still an important part of the community!",
                     "But people who write packages are more important",
                     "NO! All members of the community are valued & deserve respect!")
+meme_get("OffRamp") \%>\%
+  meme_text_ramp("Commenting my code", "Doing nothing")
+
 }
