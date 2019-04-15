@@ -13,6 +13,6 @@ A `tidyverse`-compatible `R` package for creating memes. Mostly wrappers around 
 
 ```{r cdistbf, fig.align='center'}
 library(memer)
-get_meme("DistractedBf") %>% 
-  distbf_text("tidyverse", "new R users", "base R")
+meme_get("DistractedBf") %>% 
+  meme_text_distbf("tidyverse", "new R users", "base R")
 ```

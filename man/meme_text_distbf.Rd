@@ -5,6 +5,7 @@
 \alias{meme_text_rock}
 \alias{meme_text_batman}
 \alias{meme_text_trump}
+\alias{meme_text_pigeon}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(img, newgirl, guy, oldgirl, ...)
@@ -14,6 +15,8 @@ meme_text_rock(img, dwayne, girl, ...)
 meme_text_batman(img, robin, batman, ...)
 
 meme_text_trump(img, rightpg, leftpg = "", ...)
+
+meme_text_pigeon(img, txt, humanoid, butterfly, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -53,6 +56,10 @@ for background color that annotation text is rendered on.}
 \item{rightpg}{A character string. Text for the right page in the \code{"trumpbill"} meme.}
 
 \item{leftpg}{A character string. Text for the left page in the \code{"trumpbill"} meme.}
+
+\item{humanoid}{A character string. Text for the humanoid in the \code{"IsThisAPigeon"} meme.}
+
+\item{butterfly}{A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -66,6 +73,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_batman}: Text function for the Batman slaps Robin meme.
 
 \item \code{meme_text_trump}: Text function for the Trump "first order of business" meme.
+
+\item \code{meme_text_pigeon}: Text function for the Is this a pigeon? meme.
 }}
 
 \examples{
@@ -77,4 +86,6 @@ meme_get("BatmanRobin") \%>\%
   meme_text_batman("Hey, I'm Batman!" , "No, you idiot, I'm Batman!")
 meme_get("TrumpBillSigning") \%>\%
   meme_text_trump("Stuff and nonsense")
+meme_get("IsThisAPigeon") \%>\%
+  meme_text_pigeon("Is this a pigeon?" , "Me", "Not a pigeon")
 }
