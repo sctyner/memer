@@ -111,7 +111,17 @@
 
 <span class='fu'>meme_text_batman</span>(<span class='no'>img</span>, <span class='no'>robin</span>, <span class='no'>batman</span>, <span class='no'>...</span>)
 
-<span class='fu'>meme_text_trump</span>(<span class='no'>img</span>, <span class='no'>rightpg</span>, <span class='kw'>leftpg</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='no'>...</span>)</pre>
+<span class='fu'>meme_text_trump</span>(<span class='no'>img</span>, <span class='no'>rightpg</span>, <span class='kw'>leftpg</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='no'>...</span>)
+
+<span class='fu'>meme_text_pigeon</span>(<span class='no'>img</span>, <span class='no'>isthis</span>, <span class='no'>humanoid</span>, <span class='no'>butterfly</span>, <span class='no'>...</span>)
+
+<span class='fu'>meme_text_chopper</span>(<span class='no'>img</span>, <span class='no'>sr1</span>, <span class='no'>jr1</span>, <span class='no'>sr2</span>, <span class='no'>jr2</span>, <span class='no'>sr3</span>, <span class='no'>...</span>)
+
+<span class='fu'>meme_text_brain</span>(<span class='no'>img</span>, <span class='no'>br1</span>, <span class='no'>br2</span>, <span class='no'>br3</span>, <span class='no'>br4</span>, <span class='no'>...</span>)
+
+<span class='fu'>meme_text_kermit</span>(<span class='no'>img</span>, <span class='no'>good</span>, <span class='no'>bad</span>, <span class='no'>...</span>)
+
+<span class='fu'>meme_text_buttons</span>(<span class='no'>img</span>, <span class='no'>lbtn</span>, <span class='no'>rbtn</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -175,6 +185,70 @@
       <th>leftpg</th>
       <td><p>A character string. Text for the left page in the <code>"trumpbill"</code> meme.</p></td>
     </tr>
+    <tr>
+      <th>isthis</th>
+      <td><p>A character string. Text for the question in the <code>"IsThisAPigeon"</code> meme.</p></td>
+    </tr>
+    <tr>
+      <th>humanoid</th>
+      <td><p>A character string. Text for the humanoid in the <code>"IsThisAPigeon"</code> meme.</p></td>
+    </tr>
+    <tr>
+      <th>butterfly</th>
+      <td><p>A character string. Text for the butterfly in the <code>"IsThisAPigeon"</code> meme.</p></td>
+    </tr>
+    <tr>
+      <th>sr1</th>
+      <td><p>A character string. Text for the first panel.</p></td>
+    </tr>
+    <tr>
+      <th>jr1</th>
+      <td><p>A character string. Text for the second panel.</p></td>
+    </tr>
+    <tr>
+      <th>sr2</th>
+      <td><p>A character string. Text for the third panel.</p></td>
+    </tr>
+    <tr>
+      <th>jr2</th>
+      <td><p>A character string. Text for the fourth panel.</p></td>
+    </tr>
+    <tr>
+      <th>sr3</th>
+      <td><p>A character string. Text for the fifth panel.</p></td>
+    </tr>
+    <tr>
+      <th>br1</th>
+      <td><p>A character string. Text for the first panel.</p></td>
+    </tr>
+    <tr>
+      <th>br2</th>
+      <td><p>A character string. Text for the second panel.</p></td>
+    </tr>
+    <tr>
+      <th>br3</th>
+      <td><p>A character string. Text for the third panel.</p></td>
+    </tr>
+    <tr>
+      <th>br4</th>
+      <td><p>A character string. Text for the fourth panel.</p></td>
+    </tr>
+    <tr>
+      <th>good</th>
+      <td><p>A character string. A good idea.</p></td>
+    </tr>
+    <tr>
+      <th>lbtn</th>
+      <td><p>A character string. The left button.</p></td>
+    </tr>
+    <tr>
+      <th>rbtn</th>
+      <td><p>A character string. The right button.</p></td>
+    </tr>
+    <tr>
+      <th>dark</th>
+      <td><p>A character string. A tempting, bad idea.</p></td>
+    </tr>
     </table>
     
     <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
@@ -184,6 +258,11 @@
 <li><p><code>meme_text_rock</code>: Text function for The Rock driving meme.</p></li>
 <li><p><code>meme_text_batman</code>: Text function for the Batman slaps Robin meme.</p></li>
 <li><p><code>meme_text_trump</code>: Text function for the Trump "first order of business" meme.</p></li>
+<li><p><code>meme_text_pigeon</code>: Text function for the Is this a pigeon? meme.</p></li>
+<li><p><code>meme_text_chopper</code>: Text function for the American Chopper Senior vs. Junior fight meme.</p></li>
+<li><p><code>meme_text_brain</code>: Text function for the expanding brain meme.</p></li>
+<li><p><code>meme_text_kermit</code>: Text function for the Off Ramp meme.</p></li>
+<li><p><code>meme_text_buttons</code>: Text function for the Two Buttons Anxiety meme.</p></li>
 </ul>
     
 
@@ -204,7 +283,36 @@
   <span class='fu'>meme_text_trump</span>(<span class='st'>"Stuff and nonsense"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
 #&gt;   format width height colorspace matte filesize density
 #&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
-#&gt; 1 PNG      500    410 sRGB       TRUE         0 28x28  </div></pre>
+#&gt; 1 PNG      500    410 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"IsThisAPigeon"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_pigeon</span>(<span class='st'>"Is this a pigeon?"</span> , <span class='st'>"Me"</span>, <span class='st'>"Not a pigeon"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   format width height colorspace matte filesize density
+#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
+#&gt; 1 PNG      700    395 sRGB       TRUE         0 72x72  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"AmericanChopper"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_chopper</span>(<span class='st'>"Stop calling yourself 'just an R user'!"</span>,
+                    <span class='st'>"But I've never written a package!"</span>,
+                    <span class='st'>"So?? You're still an important part of the community!"</span>,
+                    <span class='st'>"But people who write packages are more important"</span>,
+                    <span class='st'>"NO! All members of the community are valued &amp; deserve respect!"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   format width height colorspace matte filesize density
+#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
+#&gt; 1 PNG      356   1000 sRGB       TRUE         0 28x28  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"ExpandingBrain"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_brain</span>(<span class='st'>"text1"</span>,
+                    <span class='st'>"text2"</span>,
+                    <span class='st'>"text3"</span>,
+                    <span class='st'>"text4"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   format width height colorspace matte filesize density
+#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
+#&gt; 1 PNG      500    701 sRGB       TRUE         0 72x72  </div><div class='input'><span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"EvilKermit"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_kermit</span>(<span class='st'>"Me: Your text here"</span>, <span class='st'>"Me: Your evil text here"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   format width height colorspace matte filesize density
+#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
+#&gt; 1 PNG      600    516 sRGB       TRUE         0 72x72  </div><div class='input'>
+<span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"TwoButtonsAnxiety"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_buttons</span>(<span class='st'>"Should I do this?"</span>, <span class='st'>"Or this?"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   format width height colorspace matte filesize density
+#&gt;   &lt;chr&gt;  &lt;int&gt;  &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;int&gt; &lt;chr&gt;  
+#&gt; 1 PNG      333    504 sRGB       TRUE         0 28x28  </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
