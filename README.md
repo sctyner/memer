@@ -1,6 +1,12 @@
 README
 ================
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.org/sctyner/memer.svg?branch=master)](https://travis-ci.org/sctyner/memer)
+<!-- badges: end -->
+
 ## `memer`
 
 A `tidyverse`-compatible `R` package for creating memes. Mostly wrappers
