@@ -33,7 +33,7 @@ meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, font = "Impact",
 meme_text_brain(img, br1, br2, br3, br4, font = "Impact",
   color = "black", strokecolor = NULL, size = 24, ...)
 
-meme_text_kermit(img, good, bad, font = "Impact", color = "black",
+meme_text_kermit(img, good, dark, font = "Impact", color = "black",
   strokecolor = NULL, size = 20, ...)
 
 meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
@@ -48,35 +48,33 @@ meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
 
 \item{oldgirl}{A character string. Text for the right-most person in the \code{"DistractedBf"} meme.}
 
+\item{font}{string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.}
+
+\item{color}{a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`}
+
+\item{strokecolor}{a [color string](https://www.imagemagick.org/Magick++/Color.html) adds a stroke (border around the text)}
+
+\item{size}{font-size in pixels}
+
 \item{...}{Arguments passed on to \code{magick::image_annotate}
 \describe{
-  \item{color}{a valid \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}} such as
-\code{"navyblue"} or \code{"#000080"}}
-  \item{gravity}{string with
-\href{{https://www.imagemagick.org/Magick++/Enumerations.html#GravityType}{gravity}}
-value from \link{gravity_types}.}
   \item{location}{geometry string with location relative to \code{gravity}}
   \item{degrees}{rotates text around center point}
-  \item{size}{font-size in pixels}
-  \item{font}{string with font family such as \code{"sans"}, \code{"mono"}, \code{"serif"},
-\code{"Times"}, \code{"Helvetica"}, \code{"Trebuchet"}, \code{"Georgia"}, \code{"Palatino"} or \code{"Comic Sans"}.}
-  \item{strokecolor}{a \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}}
-adds a stroke (border around the text)}
   \item{boxcolor}{a \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}}
 for background color that annotation text is rendered on.}
 }}
 
-\item{dwayne}{A character string. Text for the top speech bubble in the \code{"therockdriving"} meme.}
+\item{dwayne}{A character string. Text for the top speech bubble in the \code{"TheRockDriving"} meme.}
 
-\item{girl}{A character string. Text for the other speech bubble in the \code{"therockdriving"} meme.}
+\item{girl}{A character string. Text for the other speech bubble in the \code{"TheRockDriving"} meme.}
 
-\item{robin}{A character string. Text for the Robin's speech bubble in the \code{"batmanrobin"} meme.}
+\item{robin}{A character string. Text for the Robin's speech bubble in the \code{"BatmanRobin"} meme.}
 
-\item{batman}{A character string. Text for the Batman's speech bubble in the \code{"batmanrobin"} meme.}
+\item{batman}{A character string. Text for the Batman's speech bubble in the \code{"BatmanRobin"} meme.}
 
-\item{rightpg}{A character string. Text for the right page in the \code{"trumpbill"} meme.}
+\item{rightpg}{A character string. Text for the right page in the \code{"TrumpBillSigning"} meme.}
 
-\item{leftpg}{A character string. Text for the left page in the \code{"trumpbill"} meme.}
+\item{leftpg}{A character string. Text for the left page in the \code{"TrumpBillSigning"} meme.}
 
 \item{isthis}{A character string. Text for the question in the \code{"IsThisAPigeon"} meme.}
 
@@ -84,31 +82,31 @@ for background color that annotation text is rendered on.}
 
 \item{butterfly}{A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.}
 
-\item{sr1}{A character string. Text for the first panel.}
+\item{sr1}{A character string. Text for the first panel in the \code{"AmericanChopper"} meme.}
 
-\item{jr1}{A character string. Text for the second panel.}
+\item{jr1}{A character string. Text for the second panel in the \code{"AmericanChopper"} meme.}
 
-\item{sr2}{A character string. Text for the third panel.}
+\item{sr2}{A character string. Text for the third panel in the \code{"AmericanChopper"} meme.}
 
-\item{jr2}{A character string. Text for the fourth panel.}
+\item{jr2}{A character string. Text for the fourth panel in the \code{"AmericanChopper"} meme.}
 
-\item{sr3}{A character string. Text for the fifth panel.}
+\item{sr3}{A character string. Text for the fifth panel in the \code{"AmericanChopper"} meme.}
 
-\item{br1}{A character string. Text for the first panel.}
+\item{br1}{A character string. Text for the first panel in the \code{"ExpandingBrain"} meme.}
 
-\item{br2}{A character string. Text for the second panel.}
+\item{br2}{A character string. Text for the second panel in the \code{"ExpandingBrain"} meme.}
 
-\item{br3}{A character string. Text for the third panel.}
+\item{br3}{A character string. Text for the third panel in the \code{"ExpandingBrain"} meme.}
 
-\item{br4}{A character string. Text for the fourth panel.}
+\item{br4}{A character string. Text for the fourth panel in the \code{"ExpandingBrain"} meme.}
 
-\item{good}{A character string. A good idea.}
+\item{good}{A character string. A good idea for the \code{"OffRamp"} meme.}
 
-\item{lbtn}{A character string. The left button.}
+\item{dark}{A character string. A tempting, bad idea for the \code{"OffRamp"} meme.}
 
-\item{rbtn}{A character string. The right button.}
+\item{lbtn}{A character string. The left button in the \code{"TwoButtonsAnxiety"} meme.}
 
-\item{dark}{A character string. A tempting, bad idea.}
+\item{rbtn}{A character string. The right button in the \code{"TwoButtonsAnxiety"} meme.}
 }
 \description{
 Specialized functions for placing text in memes

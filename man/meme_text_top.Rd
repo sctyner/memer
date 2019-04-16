@@ -16,20 +16,20 @@ meme_text_bottom(img, txt, font = "Impact", color = "white",
 
 \item{txt}{A character string}
 
+\item{font}{string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.}
+
+\item{color}{a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`}
+
+\item{strokecolor}{a [color string](https://www.imagemagick.org/Magick++/Color.html) adds a stroke (border around the text)}
+
+\item{gravity}{string with [gravity](https://www.imagemagick.org/Magick++/Enumerations.html#GravityType) value from [gravity_types].}
+
+\item{size}{font-size in pixels}
+
 \item{...}{Arguments passed on to \code{magick::image_annotate}
 \describe{
-  \item{color}{a valid \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}} such as
-\code{"navyblue"} or \code{"#000080"}}
-  \item{gravity}{string with
-\href{{https://www.imagemagick.org/Magick++/Enumerations.html#GravityType}{gravity}}
-value from \link{gravity_types}.}
   \item{location}{geometry string with location relative to \code{gravity}}
   \item{degrees}{rotates text around center point}
-  \item{size}{font-size in pixels}
-  \item{font}{string with font family such as \code{"sans"}, \code{"mono"}, \code{"serif"},
-\code{"Times"}, \code{"Helvetica"}, \code{"Trebuchet"}, \code{"Georgia"}, \code{"Palatino"} or \code{"Comic Sans"}.}
-  \item{strokecolor}{a \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}}
-adds a stroke (border around the text)}
   \item{boxcolor}{a \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}}
 for background color that annotation text is rendered on.}
 }}

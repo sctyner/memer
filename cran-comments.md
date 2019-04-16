@@ -1,0 +1,24 @@
+## Test environments
+* local OS X install, R 3.5.2
+* ubuntu 14.04 (on travis-ci), R 3.5.2
+* win-builder (devel and release)
+
+## R CMD check results
+
+The warnings are inherited from the way the magick::image_annotate function is documented. 
+
+0 errors | 2 warnings | 1 note
+
+WARNINGS:
+  prepare_Rd: bad markup (extra space?) at meme_text_distbf.Rd:63:91
+  prepare_Rd: bad markup (extra space?) at meme_text_top.Rd:33:91
+
+NOTE:
+  installed size is  8.9Mb
+    sub-directories of 1Mb or more:
+      extdata   8.7Mb
+
+The extdata folder contains all of the images. The large size of the folder is unavoidable. 
+
+
+* This is a new release.
