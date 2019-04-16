@@ -1,7 +1,7 @@
 #' Place text in the meme
 #'
 #'
-#' @param img An image of class \code{magick_image}. See \code{\link{meme_get}}.
+#' @param img An image of class `magick_image`. See [meme_get()].
 #' @param txt A character string
 #' @param font string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.
 #' @param color a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`
@@ -37,9 +37,9 @@ meme_text_bottom <- function(img, txt, font = "Impact",
 
 #' Specialized functions for placing text in memes
 #'
-#' @param newgirl A character string. Text for the left-most person in the \code{"DistractedBf"} meme.
-#' @param guy A character string. Text for the center person in the \code{"DistractedBf"} meme.
-#' @param oldgirl A character string. Text for the right-most person in the \code{"DistractedBf"} meme.
+#' @param newgirl A character string. Text for the left-most person in the `"DistractedBf"` meme.
+#' @param guy A character string. Text for the center person in the `"DistractedBf"` meme.
+#' @param oldgirl A character string. Text for the right-most person in the `"DistractedBf"` meme.
 #' @param font string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.
 #' @param color a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`
 #' @param strokecolor a [color string](https://www.imagemagick.org/Magick++/Color.html) adds a stroke (border around the text)
@@ -72,9 +72,9 @@ meme_text_distbf <- function(img, newgirl, guy, oldgirl, font = "Impact",
     )
 }
 
-#' @param img An image of class \code{magick_image}. See \code{\link{meme_get}}.
-#' @param dwayne A character string. Text for the top speech bubble in the \code{"TheRockDriving"} meme.
-#' @param girl A character string. Text for the other speech bubble in the \code{"TheRockDriving"} meme.
+#' @param img An image of class `magick_image`. See [meme_get()].
+#' @param dwayne A character string. Text for the top speech bubble in the `"TheRockDriving"` meme.
+#' @param girl A character string. Text for the other speech bubble in the `"TheRockDriving"` meme.
 #'
 #' @describeIn meme_text_distbf Text function for The Rock driving meme.
 #'
@@ -96,8 +96,8 @@ meme_text_rock <- function(img, dwayne, girl, font = "Impact",
     )
 }
 
-#' @param robin A character string. Text for the Robin's speech bubble in the \code{"BatmanRobin"} meme.
-#' @param batman A character string. Text for the Batman's speech bubble in the \code{"BatmanRobin"} meme.
+#' @param robin A character string. Text for the Robin's speech bubble in the `"BatmanRobin"` meme.
+#' @param batman A character string. Text for the Batman's speech bubble in the `"BatmanRobin"` meme.
 #'
 #' @describeIn meme_text_distbf Text function for the Batman slaps Robin meme.
 #'
@@ -119,8 +119,8 @@ meme_text_batman <- function(img, robin, batman, font = "Impact",
     )
 }
 
-#' @param rightpg A character string. Text for the right page in the \code{"TrumpBillSigning"} meme.
-#' @param leftpg A character string. Text for the left page in the \code{"TrumpBillSigning"} meme.
+#' @param rightpg A character string. Text for the right page in the `"TrumpBillSigning"` meme.
+#' @param leftpg A character string. Text for the left page in the `"TrumpBillSigning"` meme.
 #'
 #' @describeIn meme_text_distbf Text function for the Trump "first order of business" meme.
 #'
@@ -141,9 +141,9 @@ meme_text_trump <- function(img, rightpg, leftpg = "", font = "Impact",
 }
 
 
-#' @param isthis A character string. Text for the question in the \code{"IsThisAPigeon"} meme.
-#' @param humanoid A character string. Text for the humanoid in the \code{"IsThisAPigeon"} meme.
-#' @param butterfly A character string. Text for the butterfly in the \code{"IsThisAPigeon"} meme.
+#' @param isthis A character string. Text for the question in the `"IsThisAPigeon"` meme.
+#' @param humanoid A character string. Text for the humanoid in the `"IsThisAPigeon"` meme.
+#' @param butterfly A character string. Text for the butterfly in the `"IsThisAPigeon"` meme.
 #'
 #' @describeIn meme_text_distbf Text function for the Is this a pigeon? meme.
 #'
@@ -169,11 +169,11 @@ meme_text_pigeon <- function(img, isthis, humanoid, butterfly, font = "Impact",
 }
 
 
-#' @param sr1 A character string. Text for the first panel in the \code{"AmericanChopper"} meme.
-#' @param jr1 A character string. Text for the second panel in the \code{"AmericanChopper"} meme.
-#' @param sr2 A character string. Text for the third panel in the \code{"AmericanChopper"} meme.
-#' @param jr2 A character string. Text for the fourth panel in the \code{"AmericanChopper"} meme.
-#' @param sr3 A character string. Text for the fifth panel in the \code{"AmericanChopper"} meme.
+#' @param sr1 A character string. Text for the first panel in the `"AmericanChopper"` meme.
+#' @param jr1 A character string. Text for the second panel in the `"AmericanChopper"` meme.
+#' @param sr2 A character string. Text for the third panel in the `"AmericanChopper"` meme.
+#' @param jr2 A character string. Text for the fourth panel in the `"AmericanChopper"` meme.
+#' @param sr3 A character string. Text for the fifth panel in the `"AmericanChopper"` meme.
 #'
 #' @describeIn meme_text_distbf Text function for the American Chopper Senior vs. Junior fight meme.
 #'
@@ -212,10 +212,10 @@ meme_text_chopper <- function(img, sr1, jr1, sr2, jr2, sr3,
 }
 
 
-#' @param br1 A character string. Text for the first panel in the \code{"ExpandingBrain"} meme.
-#' @param br2 A character string. Text for the second panel in the \code{"ExpandingBrain"} meme.
-#' @param br3 A character string. Text for the third panel in the \code{"ExpandingBrain"} meme.
-#' @param br4 A character string. Text for the fourth panel in the \code{"ExpandingBrain"} meme.
+#' @param br1 A character string. Text for the first panel in the `"ExpandingBrain"` meme.
+#' @param br2 A character string. Text for the second panel in the `"ExpandingBrain"` meme.
+#' @param br3 A character string. Text for the third panel in the `"ExpandingBrain"` meme.
+#' @param br4 A character string. Text for the fourth panel in the `"ExpandingBrain"` meme.
 #'
 #' @describeIn meme_text_distbf Text function for the expanding brain meme.
 #'
@@ -247,8 +247,8 @@ meme_text_brain <- function(img, br1, br2, br3, br4,
 }
 
 
-#' @param good A character string. A good idea for the \code{"OffRamp"} meme.
-#' @param dark A character string. A tempting, bad idea for the \code{"OffRamp"} meme.
+#' @param good A character string. A good idea for the `"OffRamp"` meme.
+#' @param dark A character string. A tempting, bad idea for the `"OffRamp"` meme.
 #'
 #' @describeIn meme_text_distbf Text function for the Off Ramp meme.
 #'
@@ -270,8 +270,8 @@ meme_text_kermit <- function(img, good, dark,
     )
 }
 
-#' @param lbtn A character string. The left button in the \code{"TwoButtonsAnxiety"} meme.
-#' @param rbtn A character string. The right button in the \code{"TwoButtonsAnxiety"} meme.
+#' @param lbtn A character string. The left button in the `"TwoButtonsAnxiety"` meme.
+#' @param rbtn A character string. The right button in the `"TwoButtonsAnxiety"` meme.
 #'
 #' @describeIn  meme_text_distbf Text function for the Two Buttons Anxiety meme.
 #'

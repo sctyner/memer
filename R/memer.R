@@ -1,7 +1,7 @@
 
-#' \code{memer} package
+#' `memer` package
 #'
-#' Wrapper functions around \code{magick} package functions to create memes in R.
+#' Wrapper functions around `magick` package functions to create memes in R.
 #'
 #' See the README on
 #' or \href{https://github.com/sctyner/memer#README}{GitHub}

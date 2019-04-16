@@ -40,7 +40,7 @@ meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
   strokecolor = NULL, size = 18, ...)
 }
 \arguments{
-\item{img}{An image of class \code{magick_image}. See \code{\link{meme_get}}.}
+\item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
 
 \item{newgirl}{A character string. Text for the left-most person in the \code{"DistractedBf"} meme.}
 
@@ -48,11 +48,11 @@ meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
 
 \item{oldgirl}{A character string. Text for the right-most person in the \code{"DistractedBf"} meme.}
 
-\item{font}{string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.}
+\item{font}{string with font family such as \code{"sans"}, \code{"mono"}, \code{"serif"}, \code{"Times"}, \code{"Helvetica"}, \code{"Trebuchet"}, \code{"Georgia"}, \code{"Palatino"} or \code{"Comic Sans"}.}
 
-\item{color}{a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`}
+\item{color}{a valid \href{https://www.imagemagick.org/Magick++/Color.html}{color string} such as \code{"navyblue"} or \code{"#000080"}}
 
-\item{strokecolor}{a [color string](https://www.imagemagick.org/Magick++/Color.html) adds a stroke (border around the text)}
+\item{strokecolor}{a \href{https://www.imagemagick.org/Magick++/Color.html}{color string} adds a stroke (border around the text)}
 
 \item{size}{font-size in pixels}
 
@@ -60,7 +60,7 @@ meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
 \describe{
   \item{location}{geometry string with location relative to \code{gravity}}
   \item{degrees}{rotates text around center point}
-  \item{boxcolor}{a \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}}
+  \item{boxcolor}{a \href{https://www.imagemagick.org/Magick++/Color.html}{color string}
 for background color that annotation text is rendered on.}
 }}
 

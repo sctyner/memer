@@ -1,7 +1,7 @@
 #' Read in the meme you wish to create
 #'
 #'
-#' @param memename A character describing the meme to get. See \code{\link{meme_list}}
+#' @param memename A character describing the meme to get. See [meme_list()]
 #'
 #' @examples
 #' meme_get("AllTheThings")
@@ -13,8 +13,8 @@
 #' @section To add a new meme to the data:
 #' \describe{
 #'    \item{First}{Add the meme to the inst/extdata folder (png)}
-#'    \item{Then}{Add row to the blankmemes data \code{dplyr::add_row(blankmemes, filename = "...", name = "...")}}
-#'    \item{Finally}{Run \code{usethis::use_data(blankmemes, overwrite = T)}}
+#'    \item{Then}{Add row to the blankmemes data `dplyr::add_row(blankmemes, filename = "...", name = "...")`}
+#'    \item{Finally}{Run `usethis::use_data(blankmemes, overwrite = T)`}
 #' }
 #'
 meme_get <- function(memename) {
