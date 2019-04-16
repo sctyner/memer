@@ -7,18 +7,14 @@
 
 The warnings are inherited from the way the magick::image_annotate function is documented. 
 
-0 errors | 2 warnings | 1 note
-
-WARNINGS:
-  prepare_Rd: bad markup (extra space?) at meme_text_distbf.Rd:63:91
-  prepare_Rd: bad markup (extra space?) at meme_text_top.Rd:33:91
+0 errors | 0 warnings | 1 note
 
 NOTE:
   installed size is  8.9Mb
     sub-directories of 1Mb or more:
       extdata   8.7Mb
 
-The extdata folder contains all of the images. The large size of the folder is unavoidable. 
+The extdata folder contains all of the meme images. Unfortunately, the large size of the folder is unavoidable because of this. 
 
 
 * This is a new release.
