@@ -46,6 +46,9 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="news/index.html">Changelog</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
 </div>
@@ -80,22 +83,38 @@
 <a class="sourceLine" id="cb1-2" title="2"><span class="co"># install.packages("devtools")</span></a>
 <a class="sourceLine" id="cb1-3" title="3">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"sctyner/memer"</span>)</a></code></pre></div>
 </div>
+<div id="available-memes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#available-memes" class="anchor"></a>Available Memes</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(memer)</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw"><a href="reference/meme_list.html">meme_list</a></span>()</a></code></pre></div>
+<pre><code>##  [1] "AllTheThings"       "AmericanChopper"    "AncientAliens"     
+##  [4] "BatmanRobin"        "DistractedBf"       "EvilKermit"        
+##  [7] "ExpandingBrain"     "FirstWorldProbs"    "FryNotSure"        
+## [10] "IsThisAPigeon"      "NoneOfMyBusiness"   "CheersLeo"         
+## [13] "OneDoesNotSimply"   "DosEquisMan"        "OffRamp"           
+## [16] "OprahGiveaway"      "Philosoraptor"      "PicardFacePalm"    
+## [19] "PicardWTH"          "PutItPatrick"       "Spongebob"         
+## [22] "SuccessKid"         "ThatWouldBeGreat"   "TheRockDriving"    
+## [25] "ThinkAboutIt"       "TrumpBillSigning"   "TwoButtonsAnxiety" 
+## [28] "WhatIfIToldYou"     "CondescendingWonka" "Y-U-NOguy"         
+## [31] "ShiaJustDoIt"       "Rainbow"            "Purples"</code></pre>
+</div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(memer)</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="kw"><a href="reference/meme_get.html">meme_get</a></span>(<span class="st">"DistractedBf"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="st">  </span><span class="kw"><a href="reference/meme_text_distbf.html">meme_text_distbf</a></span>(<span class="st">"tidyverse"</span>, <span class="st">"new R users"</span>, <span class="st">"base R"</span>)</a></code></pre></div>
-<p><img src="index_files/figure-html/cdistbf-1.png" width="250" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="reference/meme_get.html">meme_get</a></span>(<span class="st">"OprahGiveaway"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/meme_text_top.html">meme_text_bottom</a></span>(<span class="st">"EVERYONE GETS A %&gt;%!!!"</span>, <span class="dt">size =</span> <span class="dv">36</span>)</a></code></pre></div>
-<p><img src="index_files/figure-html/oprah-1.png" width="250" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="reference/meme_get.html">meme_get</a></span>(<span class="st">"AmericanChopper"</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/meme_text_distbf.html">meme_text_chopper</a></span>(<span class="st">"Stop calling yourself 'just an R user'!"</span>,</a>
-<a class="sourceLine" id="cb4-3" title="3">                    <span class="st">"But I've never written a package!"</span>,</a>
-<a class="sourceLine" id="cb4-4" title="4">                    <span class="st">"So?? You're still an important part of the R community!"</span>,</a>
-<a class="sourceLine" id="cb4-5" title="5">                    <span class="st">"But people who write packages are more important"</span>,</a>
-<a class="sourceLine" id="cb4-6" title="6">                    <span class="st">"NO! All members of the R community are valued &amp; deserve respect!"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="reference/meme_get.html">meme_get</a></span>(<span class="st">"DistractedBf"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/meme_text_distbf.html">meme_text_distbf</a></span>(<span class="st">"tidyverse"</span>, <span class="st">"new R users"</span>, <span class="st">"base R"</span>)</a></code></pre></div>
+<p><img src="index_files/figure-html/cdistbf-1.png" width="75%" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw"><a href="reference/meme_get.html">meme_get</a></span>(<span class="st">"OprahGiveaway"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/meme_text_top.html">meme_text_bottom</a></span>(<span class="st">"EVERYONE GETS A %&gt;%!!!"</span>, <span class="dt">size =</span> <span class="dv">36</span>)</a></code></pre></div>
+<p><img src="index_files/figure-html/oprah-1.png" width="75%" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw"><a href="reference/meme_get.html">meme_get</a></span>(<span class="st">"AmericanChopper"</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/meme_text_distbf.html">meme_text_chopper</a></span>(<span class="st">"Stop calling yourself 'just an R user'!"</span>,</a>
+<a class="sourceLine" id="cb6-3" title="3">                    <span class="st">"But I've never written a package!"</span>,</a>
+<a class="sourceLine" id="cb6-4" title="4">                    <span class="st">"So?? You're still an important part of the R community!"</span>,</a>
+<a class="sourceLine" id="cb6-5" title="5">                    <span class="st">"But people who write packages are more important"</span>,</a>
+<a class="sourceLine" id="cb6-6" title="6">                    <span class="st">"NO! All members of the R community are valued &amp; deserve respect!"</span>)</a></code></pre></div>
 <p><img src="index_files/figure-html/chopper-1.png" width="40%" style="display: block; margin: auto;"></p>
 </div>
 </div>
@@ -121,6 +140,7 @@
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/sctyner/memer"><img src="https://travis-ci.org/sctyner/memer.svg?branch=master" alt="Travis build status"></a></li>
 <li><a href="https://ci.appveyor.com/project/sctyner/memer"><img src="https://ci.appveyor.com/api/projects/status/github/sctyner/memer?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
+<li><a href="https://cran.r-project.org/package=memer"><img src="https://www.r-pkg.org/badges/version/memer" alt="CRAN status"></a></li>
 </ul>
 </div>
 </div>

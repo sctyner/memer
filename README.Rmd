@@ -26,15 +26,21 @@ memer is a a `tidyverse`-compatible `R` package for creating memes. Mostly wrapp
 devtools::install_github("sctyner/memer")
 ```
 
+## Available Memes
+
+```{r}
+library(memer)
+meme_list()
+```
+
 ## Usage
 
-```{r cdistbf, fig.align='center'}
-library(memer)
+```{r cdistbf, fig.align='center', out.width="75%"}
 meme_get("DistractedBf") %>% 
   meme_text_distbf("tidyverse", "new R users", "base R")
 ```
 
-```{r oprah, fig.align='center'}
+```{r oprah, fig.align='center', out.width="75%"}
 meme_get("OprahGiveaway") %>% 
   meme_text_bottom("EVERYONE GETS A %>%!!!", size = 36)
 ```

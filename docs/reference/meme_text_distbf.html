@@ -80,6 +80,9 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -128,7 +131,7 @@
 <span class='fu'>meme_text_brain</span>(<span class='no'>img</span>, <span class='no'>br1</span>, <span class='no'>br2</span>, <span class='no'>br3</span>, <span class='no'>br4</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>,
   <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>, <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>24</span>, <span class='no'>...</span>)
 
-<span class='fu'>meme_text_kermit</span>(<span class='no'>img</span>, <span class='no'>good</span>, <span class='no'>bad</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>,
+<span class='fu'>meme_text_kermit</span>(<span class='no'>img</span>, <span class='no'>good</span>, <span class='no'>dark</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>,
   <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>20</span>, <span class='no'>...</span>)
 
 <span class='fu'>meme_text_buttons</span>(<span class='no'>img</span>, <span class='no'>lbtn</span>, <span class='no'>rbtn</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>,
@@ -154,47 +157,53 @@
       <td><p>A character string. Text for the right-most person in the <code>"DistractedBf"</code> meme.</p></td>
     </tr>
     <tr>
+      <th>font</th>
+      <td><p>string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.</p></td>
+    </tr>
+    <tr>
+      <th>color</th>
+      <td><p>a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`</p></td>
+    </tr>
+    <tr>
+      <th>strokecolor</th>
+      <td><p>a [color string](https://www.imagemagick.org/Magick++/Color.html) adds a stroke (border around the text)</p></td>
+    </tr>
+    <tr>
+      <th>size</th>
+      <td><p>font-size in pixels</p></td>
+    </tr>
+    <tr>
       <th>...</th>
       <td><p>Arguments passed on to <code><a href='https://www.rdocumentation.org/packages/magick/topics/painting'>magick::image_annotate</a></code></p><dl class='dl-horizontal'>
-  <dt>color</dt><dd><p>a valid <a href='{https://www.imagemagick.org/Magick++/Color.html}{color string}'> such as
-</a><code>"navyblue"</code> or <code>"#000080"</code></p></dd>
-  <dt>gravity</dt><dd><p>string with
-<a href='{https://www.imagemagick.org/Magick++/Enumerations.html#GravityType}{gravity}'>
-</a>value from gravity_types.</p></dd>
   <dt>location</dt><dd><p>geometry string with location relative to <code>gravity</code></p></dd>
   <dt>degrees</dt><dd><p>rotates text around center point</p></dd>
-  <dt>size</dt><dd><p>font-size in pixels</p></dd>
-  <dt>font</dt><dd><p>string with font family such as <code>"sans"</code>, <code>"mono"</code>, <code>"serif"</code>,
-<code>"Times"</code>, <code>"Helvetica"</code>, <code>"Trebuchet"</code>, <code>"Georgia"</code>, <code>"Palatino"</code> or <code>"Comic Sans"</code>.</p></dd>
-  <dt>strokecolor</dt><dd><p>a <a href='{https://www.imagemagick.org/Magick++/Color.html}{color string}'>
-</a>adds a stroke (border around the text)</p></dd>
   <dt>boxcolor</dt><dd><p>a <a href='{https://www.imagemagick.org/Magick++/Color.html}{color string}'>
 </a>for background color that annotation text is rendered on.</p></dd>
 </dl></td>
     </tr>
     <tr>
       <th>dwayne</th>
-      <td><p>A character string. Text for the top speech bubble in the <code>"therockdriving"</code> meme.</p></td>
+      <td><p>A character string. Text for the top speech bubble in the <code>"TheRockDriving"</code> meme.</p></td>
     </tr>
     <tr>
       <th>girl</th>
-      <td><p>A character string. Text for the other speech bubble in the <code>"therockdriving"</code> meme.</p></td>
+      <td><p>A character string. Text for the other speech bubble in the <code>"TheRockDriving"</code> meme.</p></td>
     </tr>
     <tr>
       <th>robin</th>
-      <td><p>A character string. Text for the Robin's speech bubble in the <code>"batmanrobin"</code> meme.</p></td>
+      <td><p>A character string. Text for the Robin's speech bubble in the <code>"BatmanRobin"</code> meme.</p></td>
     </tr>
     <tr>
       <th>batman</th>
-      <td><p>A character string. Text for the Batman's speech bubble in the <code>"batmanrobin"</code> meme.</p></td>
+      <td><p>A character string. Text for the Batman's speech bubble in the <code>"BatmanRobin"</code> meme.</p></td>
     </tr>
     <tr>
       <th>rightpg</th>
-      <td><p>A character string. Text for the right page in the <code>"trumpbill"</code> meme.</p></td>
+      <td><p>A character string. Text for the right page in the <code>"TrumpBillSigning"</code> meme.</p></td>
     </tr>
     <tr>
       <th>leftpg</th>
-      <td><p>A character string. Text for the left page in the <code>"trumpbill"</code> meme.</p></td>
+      <td><p>A character string. Text for the left page in the <code>"TrumpBillSigning"</code> meme.</p></td>
     </tr>
     <tr>
       <th>isthis</th>
@@ -210,55 +219,55 @@
     </tr>
     <tr>
       <th>sr1</th>
-      <td><p>A character string. Text for the first panel.</p></td>
+      <td><p>A character string. Text for the first panel in the <code>"AmericanChopper"</code> meme.</p></td>
     </tr>
     <tr>
       <th>jr1</th>
-      <td><p>A character string. Text for the second panel.</p></td>
+      <td><p>A character string. Text for the second panel in the <code>"AmericanChopper"</code> meme.</p></td>
     </tr>
     <tr>
       <th>sr2</th>
-      <td><p>A character string. Text for the third panel.</p></td>
+      <td><p>A character string. Text for the third panel in the <code>"AmericanChopper"</code> meme.</p></td>
     </tr>
     <tr>
       <th>jr2</th>
-      <td><p>A character string. Text for the fourth panel.</p></td>
+      <td><p>A character string. Text for the fourth panel in the <code>"AmericanChopper"</code> meme.</p></td>
     </tr>
     <tr>
       <th>sr3</th>
-      <td><p>A character string. Text for the fifth panel.</p></td>
+      <td><p>A character string. Text for the fifth panel in the <code>"AmericanChopper"</code> meme.</p></td>
     </tr>
     <tr>
       <th>br1</th>
-      <td><p>A character string. Text for the first panel.</p></td>
+      <td><p>A character string. Text for the first panel in the <code>"ExpandingBrain"</code> meme.</p></td>
     </tr>
     <tr>
       <th>br2</th>
-      <td><p>A character string. Text for the second panel.</p></td>
+      <td><p>A character string. Text for the second panel in the <code>"ExpandingBrain"</code> meme.</p></td>
     </tr>
     <tr>
       <th>br3</th>
-      <td><p>A character string. Text for the third panel.</p></td>
+      <td><p>A character string. Text for the third panel in the <code>"ExpandingBrain"</code> meme.</p></td>
     </tr>
     <tr>
       <th>br4</th>
-      <td><p>A character string. Text for the fourth panel.</p></td>
+      <td><p>A character string. Text for the fourth panel in the <code>"ExpandingBrain"</code> meme.</p></td>
     </tr>
     <tr>
       <th>good</th>
-      <td><p>A character string. A good idea.</p></td>
-    </tr>
-    <tr>
-      <th>lbtn</th>
-      <td><p>A character string. The left button.</p></td>
-    </tr>
-    <tr>
-      <th>rbtn</th>
-      <td><p>A character string. The right button.</p></td>
+      <td><p>A character string. A good idea for the <code>"OffRamp"</code> meme.</p></td>
     </tr>
     <tr>
       <th>dark</th>
-      <td><p>A character string. A tempting, bad idea.</p></td>
+      <td><p>A character string. A tempting, bad idea for the <code>"OffRamp"</code> meme.</p></td>
+    </tr>
+    <tr>
+      <th>lbtn</th>
+      <td><p>A character string. The left button in the <code>"TwoButtonsAnxiety"</code> meme.</p></td>
+    </tr>
+    <tr>
+      <th>rbtn</th>
+      <td><p>A character string. The right button in the <code>"TwoButtonsAnxiety"</code> meme.</p></td>
     </tr>
     </table>
     

@@ -24,22 +24,40 @@ Mostly wrappers around `magick` functions.
 devtools::install_github("sctyner/memer")
 ```
 
-## Usage
+## Available Memes
 
 ``` r
 library(memer)
+meme_list()
+```
+
+    ##  [1] "AllTheThings"       "AmericanChopper"    "AncientAliens"     
+    ##  [4] "BatmanRobin"        "DistractedBf"       "EvilKermit"        
+    ##  [7] "ExpandingBrain"     "FirstWorldProbs"    "FryNotSure"        
+    ## [10] "IsThisAPigeon"      "NoneOfMyBusiness"   "CheersLeo"         
+    ## [13] "OneDoesNotSimply"   "DosEquisMan"        "OffRamp"           
+    ## [16] "OprahGiveaway"      "Philosoraptor"      "PicardFacePalm"    
+    ## [19] "PicardWTH"          "PutItPatrick"       "Spongebob"         
+    ## [22] "SuccessKid"         "ThatWouldBeGreat"   "TheRockDriving"    
+    ## [25] "ThinkAboutIt"       "TrumpBillSigning"   "TwoButtonsAnxiety" 
+    ## [28] "WhatIfIToldYou"     "CondescendingWonka" "Y-U-NOguy"         
+    ## [31] "ShiaJustDoIt"       "Rainbow"            "Purples"
+
+## Usage
+
+``` r
 meme_get("DistractedBf") %>% 
   meme_text_distbf("tidyverse", "new R users", "base R")
 ```
 
-<img src="README_files/figure-gfm/cdistbf-1.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-gfm/cdistbf-1.png" width="75%" style="display: block; margin: auto;" />
 
 ``` r
 meme_get("OprahGiveaway") %>% 
   meme_text_bottom("EVERYONE GETS A %>%!!!", size = 36)
 ```
 
-<img src="README_files/figure-gfm/oprah-1.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-gfm/oprah-1.png" width="75%" style="display: block; margin: auto;" />
 
 ``` r
 meme_get("AmericanChopper") %>%

@@ -80,6 +80,9 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -125,20 +128,30 @@
       <td><p>A character string</p></td>
     </tr>
     <tr>
+      <th>font</th>
+      <td><p>string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.</p></td>
+    </tr>
+    <tr>
+      <th>color</th>
+      <td><p>a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`</p></td>
+    </tr>
+    <tr>
+      <th>strokecolor</th>
+      <td><p>a [color string](https://www.imagemagick.org/Magick++/Color.html) adds a stroke (border around the text)</p></td>
+    </tr>
+    <tr>
+      <th>gravity</th>
+      <td><p>string with [gravity](https://www.imagemagick.org/Magick++/Enumerations.html#GravityType) value from [gravity_types].</p></td>
+    </tr>
+    <tr>
+      <th>size</th>
+      <td><p>font-size in pixels</p></td>
+    </tr>
+    <tr>
       <th>...</th>
       <td><p>Arguments passed on to <code><a href='https://www.rdocumentation.org/packages/magick/topics/painting'>magick::image_annotate</a></code></p><dl class='dl-horizontal'>
-  <dt>color</dt><dd><p>a valid <a href='{https://www.imagemagick.org/Magick++/Color.html}{color string}'> such as
-</a><code>"navyblue"</code> or <code>"#000080"</code></p></dd>
-  <dt>gravity</dt><dd><p>string with
-<a href='{https://www.imagemagick.org/Magick++/Enumerations.html#GravityType}{gravity}'>
-</a>value from gravity_types.</p></dd>
   <dt>location</dt><dd><p>geometry string with location relative to <code>gravity</code></p></dd>
   <dt>degrees</dt><dd><p>rotates text around center point</p></dd>
-  <dt>size</dt><dd><p>font-size in pixels</p></dd>
-  <dt>font</dt><dd><p>string with font family such as <code>"sans"</code>, <code>"mono"</code>, <code>"serif"</code>,
-<code>"Times"</code>, <code>"Helvetica"</code>, <code>"Trebuchet"</code>, <code>"Georgia"</code>, <code>"Palatino"</code> or <code>"Comic Sans"</code>.</p></dd>
-  <dt>strokecolor</dt><dd><p>a <a href='{https://www.imagemagick.org/Magick++/Color.html}{color string}'>
-</a>adds a stroke (border around the text)</p></dd>
   <dt>boxcolor</dt><dd><p>a <a href='{https://www.imagemagick.org/Magick++/Color.html}{color string}'>
 </a>for background color that annotation text is rendered on.</p></dd>
 </dl></td>
