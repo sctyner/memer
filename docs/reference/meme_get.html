@@ -33,6 +33,8 @@
 <meta property="og:title" content="Read in the meme you wish to create — meme_get" />
 
 <meta property="og:description" content="Read in the meme you wish to create" />
+
+<meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -121,7 +123,7 @@
     
     <dl class='dl-horizontal'>
    <dt>First</dt><dd><p>Add the meme to the inst/extdata folder (png)</p></dd>
-   <dt>Then</dt><dd><p>Add row to the blankmemes data <code><a href='https://dplyr.tidyverse.org/reference/reexports.html'>dplyr::add_row(filename = "...", name = "...")</a></code></p></dd>
+   <dt>Then</dt><dd><p>Add row to the blankmemes data <code><a href='https://dplyr.tidyverse.org/reference/reexports.html'>dplyr::add_row(blankmemes, filename = "...", name = "...")</a></code></p></dd>
    <dt>Finally</dt><dd><p>Run <code><a href='https://usethis.r-lib.org/reference/use_data.html'>usethis::use_data(blankmemes, overwrite = T)</a></code></p></dd>
 </dl>
     

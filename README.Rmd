@@ -23,7 +23,7 @@ memer is a a `tidyverse`-compatible `R` package for creating memes. Mostly wrapp
 ```{r, eval = FALSE}
 # Install the development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("styner/memer")
+devtools::install_github("sctyner/memer")
 ```
 
 ## Usage
