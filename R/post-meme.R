@@ -11,6 +11,7 @@
 #'   tweet_meme(tweet_text = "It's dangerous to meme alone. Here take this.", tag_rstatsmemes = T)
 #' @export
 #' @importFrom magick image_write
+#' @importFrom stringr str_glue
 #' @importFrom rtweet post_tweet
 #'
 #' @section Share Your Meme with Twitter
