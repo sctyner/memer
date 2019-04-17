@@ -60,7 +60,7 @@ meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
 \describe{
   \item{location}{geometry string with location relative to \code{gravity}}
   \item{degrees}{rotates text around center point}
-  \item{boxcolor}{a \href{https://www.imagemagick.org/Magick++/Color.html}{color string}
+  \item{boxcolor}{a \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}}
 for background color that annotation text is rendered on.}
 }}
 
