@@ -31,7 +31,7 @@
 meme_tweet <- function(meme, tweet_text = "It's dangerous to meme alone. Here take this.", 
                        tag_rstatsmemes = FALSE, token = NULL) {
   
-  token <- rtweet:::check_token(token)
+  # token <- rtweet:::check_token(token)
   
   ## create temporary filename
   fname <- tempfile(fileext = paste0(".png"))
