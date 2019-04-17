@@ -53,3 +53,21 @@ meme_get("AmericanChopper") %>%
                     "But people who write packages are more important",
                     "NO! All members of the R community are valued & deserve respect!")
 ```
+
+
+## Post R Memes directly to Twitter!
+
+You can also post R memes directly to Twitter. You will need to install the [rtweet](https://github.com/mkearney/rtweet/) package for that. Just make sure to set up a Twitter token ([see here for more information on that](https://rtweet.info/articles/auth.html)) and you are good to go. The `tweet_meme` function also includes the possibility to tag the [R Memes for Statistical Fiends](https://twitter.com/rstatsmemes) account on Twitter for maximum exposure :)
+
+```{r, post_memes_1, eval=F}
+meme_get("DosEquisMan") %>% 
+  meme_text_top("I don't always tweet memes", size = 28) %>% 
+  meme_text_bottom("But when I do\nI use the memer package in R", size = 26) %>%
+  tweet_meme(tweet_text = "It's dangerous to meme alone. Here take this.",
+             tag_rstatsmemes = T)
+```
+
+```{r post_memes_2, echo = F, fig.align='center', out.width="75%"}
+knitr::include_graphics("https://i.imgur.com/XvKhZZc.png")
+```
+

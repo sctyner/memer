@@ -6,7 +6,7 @@
 \usage{
 tweet_meme(meme,
   tweet_text = "It's dangerous to meme alone. Here take this.",
-  tag_rstatsmemes = F)
+  tag_rstatsmemes = FALSE, token = NULL)
 }
 \arguments{
 \item{meme}{an external pointer of class 'magick-image'}
@@ -14,6 +14,13 @@ tweet_meme(meme,
 \item{tweet_text}{The text that you want to post along with your meme}
 
 \item{tag_rstatsmemes}{adds two hashtags and tags the "rstatsmemes" account}
+
+\item{token}{Every user should have their own Oauth (Twitter API) token. By
+default \code{token = NULL} this function looks for the path to a saved
+Twitter token via environment variables (which is what \code{create_token()}
+sets up by default during initial token creation). For instruction on how
+to create a Twitter token see the tokens vignette, i.e.,
+\code{vignettes("auth", "rtweet")} or see \code{?tokens}.}
 }
 \description{
 Posts a meme to Twitter

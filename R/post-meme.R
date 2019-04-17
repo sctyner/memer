@@ -4,11 +4,18 @@
 #' @param meme an external pointer of class 'magick-image' 
 #' @param tweet_text The text that you want to post along with your meme
 #' @param tag_rstatsmemes adds two hashtags and tags the "rstatsmemes" account 
+#' @param token Every user should have their own Oauth (Twitter API) token. By
+#'   default \code{token = NULL} this function looks for the path to a saved
+#'   Twitter token via environment variables (which is what `create_token()`
+#'   sets up by default during initial token creation). For instruction on how
+#'   to create a Twitter token see the tokens vignette, i.e.,
+#'   `vignettes("auth", "rtweet")` or see \code{?tokens}.
 #' 
 #' @examples
 #' meme_get("OprahGiveaway") %>% 
 #'   meme_text_bottom("EVERYONE GETS R MEMES!!!", size = 36) %>% 
-#'   tweet_meme(tweet_text = "It's dangerous to meme alone. Here take this.", tag_rstatsmemes = T)
+#'   tweet_meme(tweet_text = "It's dangerous to meme alone. Here take this.", 
+#'   tag_rstatsmemes = T)
 #' @export
 #' @importFrom magick image_write
 #' @importFrom stringr str_glue
@@ -21,7 +28,10 @@
 #'    \item{Finally}{Post meme to Twitter}
 #' }
 #'
-tweet_meme <- function(meme, tweet_text = "It's dangerous to meme alone. Here take this.", tag_rstatsmemes = F) {
+tweet_meme <- function(meme, tweet_text = "It's dangerous to meme alone. Here take this.", 
+                       tag_rstatsmemes = FALSE, token = NULL) {
+  
+  token <- rtweet:::check_token(token)
   
   ## create temporary filename
   fname <- tempfile(fileext = paste0(".png"))
@@ -35,6 +45,6 @@ tweet_meme <- function(meme, tweet_text = "It's dangerous to meme alone. Here ta
   }
   
   ## post tweet from rtweet
-  post_tweet(status = tweet_text, media = fname)
+  post_tweet(status = tweet_text, media = fname, token = token)
   
 }
