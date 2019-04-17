@@ -28,7 +28,7 @@
 #'    \item{Finally}{Post meme to Twitter}
 #' }
 #'
-tweet_meme <- function(meme, tweet_text = "It's dangerous to meme alone. Here take this.", 
+meme_tweet <- function(meme, tweet_text = "It's dangerous to meme alone. Here take this.", 
                        tag_rstatsmemes = FALSE, token = NULL) {
   
   token <- rtweet:::check_token(token)

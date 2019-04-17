@@ -84,7 +84,7 @@ on Twitter for maximum exposure :)
 meme_get("DosEquisMan") %>% 
   meme_text_top("I don't always tweet memes", size = 28) %>% 
   meme_text_bottom("But when I do\nI use the memer package in R", size = 26) %>%
-  tweet_meme(tweet_text = "It's dangerous to meme alone. Here take this.",
+  meme_tweet(tweet_text = "It's dangerous to meme alone. Here take this.",
              tag_rstatsmemes = T)
 ```
 
