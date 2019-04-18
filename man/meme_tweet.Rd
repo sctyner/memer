@@ -23,7 +23,7 @@ to create a Twitter token see the tokens vignette, i.e.,
 \code{vignettes("auth", "rtweet")} or see \code{?tokens}.}
 }
 \description{
-Posts a meme to Twitter
+Make sure to have rtweet installed!
 }
 \examples{
 meme_get("OprahGiveaway") \%>\% 
