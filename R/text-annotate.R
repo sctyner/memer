@@ -298,7 +298,7 @@ meme_text_buttons <- function(img, lbtn, rbtn, font = "Impact",
 
 #' @param top A character string. Text for the top panel in the `"HotlineDrake"` meme.
 #' @param bot A character string. Text for the bottom panel in the `"HotlineDrake"` meme.
-#' 
+#'
 #' @describeIn  meme_text_distbf Text function for the Drake meme.
 #'
 #' @examples
@@ -306,14 +306,14 @@ meme_text_buttons <- function(img, lbtn, rbtn, font = "Impact",
 #'   meme_text_drake("Handcrafted memes", "Reproducible memes")
 #'
 #' @export
-meme_text_drake <- function(img, br1, br2,
+meme_text_drake <- function(img, top, bot,
                             font = "Impact", color = "black", strokecolor = NULL,
-                            size = 36, ...){
-  image_annotate(img, str_wrap(br1,20),
+                            size = 30, ...){
+  image_annotate(img, str_wrap(top,15),
                  font = font, color = color, strokecolor = strokecolor,
-                 gravity = "NorthWest", location = geometry_point(380,110), size = size, ...
+                 gravity = "North", location = geometry_point(125,0), size = size, ...
   ) %>%
-    image_annotate(str_wrap(br2,20), font = "Impact", color = "black", strokecolor = NULL,
-                   gravity = "SouthWest", location = geometry_point(380,110), size = size, ...
+    image_annotate(str_wrap(bot,15), font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "Center", location = geometry_point(125,50), size = size, ...
     )
 }

@@ -40,8 +40,8 @@ meme_text_kermit(img, good, dark, font = "Impact", color = "black",
 meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
   strokecolor = NULL, size = 18, ...)
 
-meme_text_drake(img, br1, br2, font = "Impact", color = "black",
-  strokecolor = NULL, size = 36, ...)
+meme_text_drake(img, top, bot, font = "Impact", color = "black",
+  strokecolor = NULL, size = 30, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
