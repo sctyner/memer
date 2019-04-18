@@ -14,6 +14,9 @@
 #' @importFrom magick image_annotate geometry_point
 #' @inheritDotParams magick::image_annotate location degrees boxcolor
 #'
+#' @references
+#' Jeroen Ooms (2018). magick: Advanced Graphics and Image-Processing in R. R package version 2.0.
+#' \url{https://CRAN.R-project.org/package=magick}
 #' @export
 #' @describeIn meme_text_top Place text in center top of meme
 meme_text_top <- function(img, txt, font = "Impact",

@@ -30,7 +30,7 @@ meme_text_bottom(img, txt, font = "Impact", color = "white",
 \describe{
   \item{location}{geometry string with location relative to \code{gravity}}
   \item{degrees}{rotates text around center point}
-  \item{boxcolor}{a \href{{https://www.imagemagick.org/Magick++/Color.html}{color string}}
+  \item{boxcolor}{a \href{https://www.imagemagick.org/Magick++/Color.html}{color string}
 for background color that annotation text is rendered on.}
 }}
 }
@@ -47,4 +47,8 @@ Place text in the meme
 \examples{
 meme_get("AllTheThings") \%>\% meme_text_top("GGPLOT ALL THE THINGS!")
 meme_get("OprahGiveaway") \%>\% meme_text_bottom("EVERYONE GETS A \%>\%!!!")
+}
+\references{
+Jeroen Ooms (2018). magick: Advanced Graphics and Image-Processing in R. R package version 2.0.
+\url{https://CRAN.R-project.org/package=magick}
 }
