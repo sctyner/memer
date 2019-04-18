@@ -1,5 +1,6 @@
 #' Posts a meme to Twitter
 #'
+#' Make sure to have rtweet installed!
 #'
 #' @param meme an external pointer of class 'magick-image' 
 #' @param tweet_text The text that you want to post along with your meme
@@ -19,7 +20,6 @@
 #' @export
 #' @importFrom magick image_write
 #' @importFrom stringr str_glue
-#' @importFrom rtweet post_tweet
 #'
 #' @section Share Your Meme with Twitter
 #' \describe{
@@ -31,7 +31,7 @@
 meme_tweet <- function(meme, tweet_text = "It's dangerous to meme alone. Here take this.", 
                        tag_rstatsmemes = FALSE, token = NULL) {
   
-  # token <- rtweet:::check_token(token)
+  token <- rtweet:::check_token(token)
   
   ## create temporary filename
   fname <- tempfile(fileext = paste0(".png"))
@@ -45,6 +45,6 @@ meme_tweet <- function(meme, tweet_text = "It's dangerous to meme alone. Here ta
   }
   
   ## post tweet from rtweet
-  post_tweet(status = tweet_text, media = fname, token = token)
+  rtweet::post_tweet(status = tweet_text, media = fname, token = token)
   
 }
