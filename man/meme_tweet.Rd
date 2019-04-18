@@ -26,8 +26,10 @@ to create a Twitter token see the tokens vignette, i.e.,
 Make sure to have rtweet installed!
 }
 \examples{
+\dontrun{
 meme_get("OprahGiveaway") \%>\% 
   meme_text_bottom("EVERYONE GETS R MEMES!!!", size = 36) \%>\% 
   meme_tweet(tweet_text = "It's dangerous to meme alone. Here take this.", 
   tag_rstatsmemes = T)
+}
 }
