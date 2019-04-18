@@ -34,7 +34,11 @@
 #' \url{https://cran.r-project.org/package=rtweet}
 #' @export
 meme_tweet <- function(meme, tweet_text = "It's dangerous to meme alone. Here take this.",
-                       tag_rstatsmemes = FALSE, token = rtweet::get_token()) {
+                       tag_rstatsmemes = FALSE, token = NULL) {
+ ## get token
+  if (is.null(token)){
+    token <- rtweet::get_token()
+  }
 
   ## create temporary filename
   fname <- tempfile(fileext = paste0(".png"))

@@ -6,7 +6,7 @@
 \usage{
 meme_tweet(meme,
   tweet_text = "It's dangerous to meme alone. Here take this.",
-  tag_rstatsmemes = FALSE, token = rtweet::get_token())
+  tag_rstatsmemes = FALSE, token = NULL)
 }
 \arguments{
 \item{meme}{an external pointer of class 'magick-image'}
