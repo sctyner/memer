@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @examples
-#' meme_explain("Hotlinedrake", launch = FALSE)
+#' meme_explain("HotlineDrake", launch = FALSE)
 meme_explain <- function(memename, 
                          launch = interactive(), 
                          content_warning = TRUE) {

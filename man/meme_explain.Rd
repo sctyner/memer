@@ -24,5 +24,5 @@ knowyourmeme page that can explain it for us old
 people.
 }
 \examples{
-meme_explain("Hotlinedrake", launch = FALSE)
+meme_explain("HotlineDrake", launch = FALSE)
 }
