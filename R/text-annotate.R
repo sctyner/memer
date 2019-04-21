@@ -14,6 +14,9 @@
 #' @importFrom magick image_annotate geometry_point
 #' @inheritDotParams magick::image_annotate location degrees boxcolor
 #'
+#' @references
+#' Jeroen Ooms (2018). magick: Advanced Graphics and Image-Processing in R. R package version 2.0.
+#' \url{https://CRAN.R-project.org/package=magick}
 #' @export
 #' @describeIn meme_text_top Place text in center top of meme
 meme_text_top <- function(img, txt, font = "Impact",
@@ -291,4 +294,26 @@ meme_text_buttons <- function(img, lbtn, rbtn, font = "Impact",
                    font = font, color = color, strokecolor = strokecolor,
                    gravity = "North", location = geometry_point(20,35), size = size, ...
                    )
+}
+
+#' @param top A character string. Text for the top panel in the `"HotlineDrake"` meme.
+#' @param bot A character string. Text for the bottom panel in the `"HotlineDrake"` meme.
+#'
+#' @describeIn  meme_text_distbf Text function for the Drake meme.
+#'
+#' @examples
+#' meme_get("HotlineDrake") %>%
+#'   meme_text_drake("Handcrafted memes", "Reproducible memes")
+#'
+#' @export
+meme_text_drake <- function(img, top, bot,
+                            font = "Impact", color = "black", strokecolor = NULL,
+                            size = 30, ...){
+  image_annotate(img, str_wrap(top,15),
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "North", location = geometry_point(125,0), size = size, ...
+  ) %>%
+    image_annotate(str_wrap(bot,15), font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "Center", location = geometry_point(125,50), size = size, ...
+    )
 }

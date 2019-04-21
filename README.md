@@ -69,3 +69,36 @@ meme_get("AmericanChopper") %>%
 ```
 
 <img src="README_files/figure-gfm/chopper-1.png" width="40%" style="display: block; margin: auto;" />
+
+## Post R Memes directly to Twitter\!
+
+``` r
+meme_get("ExpandingBrain") %>% 
+  meme_text_brain("Sharing memes online", 
+                  "Making your own memes", 
+                  "Making memes in R", 
+                  "Using rtweet to share your memes", 
+                  size = 17)
+```
+
+<img src="README_files/figure-gfm/brain-1.png" width="50%" style="display: block; margin: auto;" />
+
+You can also post memes directly to Twitter. You will need to install
+the [rtweet](https://github.com/mkearney/rtweet/) package for that. Just
+make sure to set up a Twitter token ([see here for more information on
+that](https://rtweet.info/articles/auth.html)) and you are good to go.
+The `meme_tweet` function also includes the possibility to tag the [R
+Memes for Statistical Fiends](https://twitter.com/rstatsmemes) account
+on Twitter for maximum exposure :)
+
+``` r
+meme_get("DosEquisMan") %>% 
+  meme_text_top("I don't always tweet memes", size = 28) %>% 
+  meme_text_bottom("But when I do\nI use the memer package in R", size = 26) %>%
+  meme_tweet(tweet_text = "It's dangerous to meme alone. Here take this.",
+             tag_rstatsmemes = T)
+```
+
+<img src="https://i.imgur.com/XvKhZZc.png" width="75%" style="display: block; margin: auto;" />
+
+\`\`\`

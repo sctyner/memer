@@ -10,6 +10,7 @@
 \alias{meme_text_brain}
 \alias{meme_text_kermit}
 \alias{meme_text_buttons}
+\alias{meme_text_drake}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(img, newgirl, guy, oldgirl, font = "Impact",
@@ -38,6 +39,9 @@ meme_text_kermit(img, good, dark, font = "Impact", color = "black",
 
 meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
   strokecolor = NULL, size = 18, ...)
+
+meme_text_drake(img, top, bot, font = "Impact", color = "black",
+  strokecolor = NULL, size = 30, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -107,6 +111,10 @@ for background color that annotation text is rendered on.}
 \item{lbtn}{A character string. The left button in the \code{"TwoButtonsAnxiety"} meme.}
 
 \item{rbtn}{A character string. The right button in the \code{"TwoButtonsAnxiety"} meme.}
+
+\item{top}{A character string. Text for the top panel in the \code{"HotlineDrake"} meme.}
+
+\item{bot}{A character string. Text for the bottom panel in the \code{"HotlineDrake"} meme.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -130,6 +138,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_kermit}: Text function for the Off Ramp meme.
 
 \item \code{meme_text_buttons}: Text function for the Two Buttons Anxiety meme.
+
+\item \code{meme_text_drake}: Text function for the Drake meme.
 }}
 
 \examples{
@@ -159,5 +169,8 @@ meme_get("EvilKermit") \%>\%
 
 meme_get("TwoButtonsAnxiety") \%>\%
   meme_text_buttons("Should I do this?", "Or this?")
+
+meme_get("HotlineDrake") \%>\%
+  meme_text_drake("Handcrafted memes", "Reproducible memes")
 
 }

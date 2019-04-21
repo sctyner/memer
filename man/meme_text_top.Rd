@@ -48,3 +48,7 @@ Place text in the meme
 meme_get("AllTheThings") \%>\% meme_text_top("GGPLOT ALL THE THINGS!")
 meme_get("OprahGiveaway") \%>\% meme_text_bottom("EVERYONE GETS A \%>\%!!!")
 }
+\references{
+Jeroen Ooms (2018). magick: Advanced Graphics and Image-Processing in R. R package version 2.0.
+\url{https://CRAN.R-project.org/package=magick}
+}
