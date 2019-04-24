@@ -9,7 +9,9 @@
 #' new meme you must build and install the package after running `meme_add()`.
 #'
 #' @examples
+#' \dontrun{
 #' meme_add("YoDawg", "yodawg.png")
+#' }
 meme_add <- function(name, file) {
   
   cat('Make sure you have added the image file to the inst/extdata directory')
