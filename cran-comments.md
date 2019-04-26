@@ -5,14 +5,12 @@
 
 ## R CMD check results
 
-The warnings are inherited from the way the magick::image_annotate function is documented. 
-
 0 errors | 0 warnings | 1 note
 
 NOTE:
-  installed size is  9.1Mb
+  installed size is  9.0Mb
     sub-directories of 1Mb or more:
-      extdata   8.9Mb
+      extdata   8.8Mb
 
 The extdata folder contains all of the meme images. Unfortunately, the large size of the folder is unavoidable because of this. 
 

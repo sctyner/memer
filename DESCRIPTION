@@ -14,7 +14,9 @@ Imports:
     readr,
     stringr
 Suggests:
-    rtweet 
+    rtweet,
+    dplyr (>= 0.8.0), 
+    usethis (>= 1.5.0)
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

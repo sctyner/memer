@@ -10,5 +10,6 @@
 #' @name memer
 NULL
 
+##  from https://github.com/STAT545-UBC/Discussion/issues/451:
 ## quiets concerns of R CMD check re: the .'s that appear in pipelines
-if(getRversion() >= "2.15.1")  utils::globalVariables(c("blankmemes"))
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("blankmemes", "filename", "name"))

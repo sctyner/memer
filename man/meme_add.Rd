@@ -7,9 +7,9 @@
 meme_add(name, file)
 }
 \arguments{
-\item{file}{Filename including the file extension.}
+\item{name}{Name of the meme in CamelCase.}
 
-\item{Name}{Name of the meme in CamelCase.}
+\item{file}{Filename including the file extension.}
 }
 \description{
 Add meme to \code{memer} package
@@ -19,6 +19,8 @@ Add meme to \code{memer} package
 new meme you must build and install the package after running \code{meme_add()}.
 }
 \examples{
-meme_add("YoDawg", "yodawg.png")
+\dontrun{
+memer::meme_add("YoDawg", "yodawg.png")
+}
 }
 \keyword{internal}
