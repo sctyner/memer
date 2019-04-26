@@ -1,7 +1,7 @@
 Package: memer
 Type: Package
 Title: A tidyverse compatible package for creating memes in R using magick
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: c(person("Sam", "Tyner", email = "sctyner90@gmail.com",
                   role = c("aut", "cre")),
            person("Haley", "Jeppson", email = "hjeppson@iastate.edu",
