@@ -10,9 +10,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' memer::meme_add("YoDawg", "yodawg.png")
+#' memer:::meme_add("YoDawg", "yodawg.png")
 #' }
-#' @export
 meme_add <- function(name, file) {
 
   if (name %in% memer::blankmemes$name) {

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All the memes available for meme creation in the memer package — blankmemes • memer</title>
+<title>Explain a meme (for the old people out there) — meme_explain • memer</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,11 @@
 
 
 
-<meta property="og:title" content="All the memes available for meme creation in the memer package — blankmemes" />
+<meta property="og:title" content="Explain a meme (for the old people out there) — meme_explain" />
 
-<meta property="og:description" content="All the memes available for meme creation in the memer package" />
+<meta property="og:description" content="Takes a meme name from memer and takes you to the
+knowyourmeme page that can explain it for us old
+people." />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -99,40 +101,57 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>All the memes available for meme creation in the memer package</h1>
+    <h1>Explain a meme (for the old people out there)</h1>
     
-    <div class="hidden name"><code>blankmemes.Rd</code></div>
+    <div class="hidden name"><code>meme_explain.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>All the memes available for meme creation in the memer package</p>
+    <p>Takes a meme name from memer and takes you to the
+knowyourmeme page that can explain it for us old
+people.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>blankmemes</span></pre>
-        
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
-
-    <p>A data frame with 31 rows and 2 variables:</p><dl class='dl-horizontal'>
-<dt>filename</dt><dd><p>File where the image is</p></dd>
-<dt>name</dt><dd><p>Name to use to call the meme in <code><a href='meme_get.html'>meme_get()</a></code></p></dd>
-</dl>
+    <pre class="usage"><span class='fu'>meme_explain</span>(<span class='no'>memename</span>, <span class='kw'>launch</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/interactive'>interactive</a></span>(), <span class='kw'>content_warning</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>memename</th>
+      <td><p>A character describing the meme to get. See <code><a href='meme_list.html'>meme_list()</a></code></p></td>
+    </tr>
+    <tr>
+      <th>launch</th>
+      <td><p>Whether to launch the link in your browser
+(defaults to TRUE if in interactive session)</p></td>
+    </tr>
+    <tr>
+      <th>content_warning</th>
+      <td><p>Whether to warn about potentially offensive content
+on knowyourmeme</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><a href='https://knowyourmeme.com/'>https://knowyourmeme.com/</a></p>
+    <p>The link to the knowyourmeme article about a meme</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>meme_explain</span>(<span class='st'>"HotlineDrake"</span>, <span class='kw'>launch</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='message'>knowyourmeme can contain potentially offensive results.</span></div><div class='output co'>#&gt; [1] "https://knowyourmeme.com/memes/drakeposting"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#source">Source</a></li>
-          </ul>
+      <li><a href="#value">Value</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

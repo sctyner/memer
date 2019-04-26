@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All the memes available for meme creation in the memer package — blankmemes • memer</title>
+<title>Posts a meme to Twitter — meme_tweet • memer</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="All the memes available for meme creation in the memer package — blankmemes" />
+<meta property="og:title" content="Posts a meme to Twitter — meme_tweet" />
 
-<meta property="og:description" content="All the memes available for meme creation in the memer package" />
+<meta property="og:description" content="Pipe your meme directly into this function to post your meme on Twitter. Make sure to have rtweet installed!" />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -99,40 +99,82 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>All the memes available for meme creation in the memer package</h1>
+    <h1>Posts a meme to Twitter</h1>
     
-    <div class="hidden name"><code>blankmemes.Rd</code></div>
+    <div class="hidden name"><code>meme_tweet.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>All the memes available for meme creation in the memer package</p>
+    <p>Pipe your meme directly into this function to post your meme on Twitter. Make sure to have <code>rtweet</code> installed!</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>blankmemes</span></pre>
-        
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <pre class="usage"><span class='fu'>meme_tweet</span>(<span class='no'>meme</span>,
+  <span class='kw'>tweet_text</span> <span class='kw'>=</span> <span class='st'>"It's dangerous to meme alone. Here take this."</span>,
+  <span class='kw'>tag_rstatsmemes</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>token</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>meme</th>
+      <td><p>an external pointer of class 'magick-image'</p></td>
+    </tr>
+    <tr>
+      <th>tweet_text</th>
+      <td><p>The text that you want to post along with your meme</p></td>
+    </tr>
+    <tr>
+      <th>tag_rstatsmemes</th>
+      <td><p>adds two hashtags and tags the "rstatsmemes" account</p></td>
+    </tr>
+    <tr>
+      <th>token</th>
+      <td><p>Every user should have their own Oauth (Twitter API) token. By
+default <code>token = rtweet::get_token()</code>, which looks for a saved
+Twitter token via environment variables (which is what <code><a href='https://www.rdocumentation.org/packages/rtweet/topics/create_token'>rtweet::create_token()</a></code>
+sets up by default during initial token creation). For instruction on how
+to create a Twitter token see the tokens vignette, i.e.,
+<code><a href='https://www.rdocumentation.org/packages/utils/topics/vignette'>vignettes("auth", "rtweet")</a></code> or see <code>?tokens</code>. See <code><a href='https://www.rdocumentation.org/packages/rtweet/topics/get_tokens'>rtweet::get_token()</a></code>.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="how-to-share-your-meme-on-twitter"><a class="anchor" href="#how-to-share-your-meme-on-twitter"></a>How to share your meme on Twitter</h2>
 
-    <p>A data frame with 31 rows and 2 variables:</p><dl class='dl-horizontal'>
-<dt>filename</dt><dd><p>File where the image is</p></dd>
-<dt>name</dt><dd><p>Name to use to call the meme in <code><a href='meme_get.html'>meme_get()</a></code></p></dd>
+    
+    <dl class='dl-horizontal'>
+<dt>First</dt><dd><p>Authenticate your Twitter account, i.e. create a token)</p></dd>
+<dt>Then</dt><dd><p>Create meme of your liking</p></dd>
+<dt>Finally</dt><dd><p>Post meme to Twitter</p></dd>
 </dl>
     
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p><a href='https://knowyourmeme.com/'>https://knowyourmeme.com/</a></p>
+    <p>Kearney, M. W. (2018). rtweet: Collecting Twitter Data. R package version 0.6.7 Retrieved from
+<a href='https://cran.r-project.org/package=rtweet'>https://cran.r-project.org/package=rtweet</a></p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"OprahGiveaway"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'><a href='meme_text_top.html'>meme_text_bottom</a></span>(<span class='st'>"EVERYONE GETS R MEMES!!!"</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>36</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_tweet</span>(<span class='kw'>tweet_text</span> <span class='kw'>=</span> <span class='st'>"It's dangerous to meme alone. Here take this."</span>,
+  <span class='kw'>tag_rstatsmemes</span> <span class='kw'>=</span> <span class='no'>T</span>)
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#format">Format</a></li>
+      <li><a href="#how-to-share-your-meme-on-twitter">How to share your meme on Twitter</a></li>
 
-      <li><a href="#source">Source</a></li>
-          </ul>
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

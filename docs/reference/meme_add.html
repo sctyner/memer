@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All the memes available for meme creation in the memer package — blankmemes • memer</title>
+<title>Add meme to <code>memer</code> package — meme_add • memer</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="All the memes available for meme creation in the memer package — blankmemes" />
+<meta property="og:title" content="Add meme to <code>memer</code> package — meme_add" />
 
-<meta property="og:description" content="All the memes available for meme creation in the memer package" />
+<meta property="og:description" content="Add meme to memer package" />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -99,40 +99,52 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>All the memes available for meme creation in the memer package</h1>
+    <h1>Add meme to <code>memer</code> package</h1>
     
-    <div class="hidden name"><code>blankmemes.Rd</code></div>
+    <div class="hidden name"><code>meme_add.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>All the memes available for meme creation in the memer package</p>
+    <p>Add meme to <code>memer</code> package</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>blankmemes</span></pre>
-        
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
-
-    <p>A data frame with 31 rows and 2 variables:</p><dl class='dl-horizontal'>
-<dt>filename</dt><dd><p>File where the image is</p></dd>
-<dt>name</dt><dd><p>Name to use to call the meme in <code><a href='meme_get.html'>meme_get()</a></code></p></dd>
-</dl>
+    <pre class="usage"><span class='fu'>meme_add</span>(<span class='no'>name</span>, <span class='no'>file</span>)</pre>
     
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>name</th>
+      <td><p>Name of the meme in CamelCase.</p></td>
+    </tr>
+    <tr>
+      <th>file</th>
+      <td><p>Filename including the file extension.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p><a href='https://knowyourmeme.com/'>https://knowyourmeme.com/</a></p>
+    <p><code>memer</code> uses <code><a href='blankmemes.html'>memer::blankmemes</a></code> to resolve filenames, so to use a
+new meme you must build and install the package after running <code>meme_add()</code>.</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='kw pkg'>memer</span><span class='kw ns'>:::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/memer/topics/meme_add'>meme_add</a></span>(<span class='st'>"YoDawg"</span>, <span class='st'>"yodawg.png"</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#source">Source</a></li>
-          </ul>
+      <li><a href="#details">Details</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

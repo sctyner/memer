@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">memer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9000</span>
       </span>
     </div>
 
@@ -121,7 +121,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>img</th>
-      <td><p>An image of class <code>magick_image</code>. See <code><a href='meme_get.html'>meme_get</a></code>.</p></td>
+      <td><p>An image of class <code>magick_image</code>. See <code><a href='meme_get.html'>meme_get()</a></code>.</p></td>
     </tr>
     <tr>
       <th>txt</th>
@@ -129,19 +129,19 @@
     </tr>
     <tr>
       <th>font</th>
-      <td><p>string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.</p></td>
+      <td><p>string with font family such as <code>"sans"</code>, <code>"mono"</code>, <code>"serif"</code>, <code>"Times"</code>, <code>"Helvetica"</code>, <code>"Trebuchet"</code>, <code>"Georgia"</code>, <code>"Palatino"</code> or <code>"Comic Sans"</code>.</p></td>
     </tr>
     <tr>
       <th>color</th>
-      <td><p>a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`</p></td>
+      <td><p>a valid <a href='https://www.imagemagick.org/Magick++/Color.html'>color string</a> such as <code>"navyblue"</code> or <code>"#000080"</code></p></td>
     </tr>
     <tr>
       <th>strokecolor</th>
-      <td><p>a [color string](https://www.imagemagick.org/Magick++/Color.html) adds a stroke (border around the text)</p></td>
+      <td><p>a <a href='https://www.imagemagick.org/Magick++/Color.html'>color string</a> adds a stroke (border around the text)</p></td>
     </tr>
     <tr>
       <th>gravity</th>
-      <td><p>string with [gravity](https://www.imagemagick.org/Magick++/Enumerations.html#GravityType) value from [gravity_types].</p></td>
+      <td><p>string with <a href='https://www.imagemagick.org/Magick++/Enumerations.html#GravityType'>gravity</a> value from gravity_types.</p></td>
     </tr>
     <tr>
       <th>size</th>
@@ -152,8 +152,8 @@
       <td><p>Arguments passed on to <code><a href='https://www.rdocumentation.org/packages/magick/topics/painting'>magick::image_annotate</a></code></p><dl class='dl-horizontal'>
   <dt>location</dt><dd><p>geometry string with location relative to <code>gravity</code></p></dd>
   <dt>degrees</dt><dd><p>rotates text around center point</p></dd>
-  <dt>boxcolor</dt><dd><p>a <a href='{https://www.imagemagick.org/Magick++/Color.html}{color string}'>
-</a>for background color that annotation text is rendered on.</p></dd>
+  <dt>boxcolor</dt><dd><p>a <a href='https://www.imagemagick.org/Magick++/Color.html'>color string</a>
+for background color that annotation text is rendered on.</p></dd>
 </dl></td>
     </tr>
     </table>
@@ -164,6 +164,11 @@
 <li><p><code>meme_text_top</code>: Place text in center top of meme</p></li>
 <li><p><code>meme_text_bottom</code>: Place text in bottom center of meme</p></li>
 </ul>
+    
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Jeroen Ooms (2018). magick: Advanced Graphics and Image-Processing in R. R package version 2.0.
+<a href='https://CRAN.R-project.org/package=magick'>https://CRAN.R-project.org/package=magick</a></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -181,6 +186,8 @@
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#functions">Functions</a></li>
+
+      <li><a href="#references">References</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

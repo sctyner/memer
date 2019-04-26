@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">memer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9000</span>
       </span>
     </div>
 
@@ -40,7 +40,7 @@
 <li>
   <a href="index.html">
     <span class="fa fa-home fa-lg"></span>
-     
+
   </a>
 </li>
 <li>
@@ -58,13 +58,13 @@
 </div>
 <!--/.navbar -->
 
-      
+
       </header><div class="row">
   <div class="col-md-9 contents">
-    
 
-    
-    
+
+
+
 <div id="memer" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#memer" class="anchor"></a>memer <img src="reference/figures/logo.png" align="right" width="120">
@@ -88,17 +88,18 @@
 <a href="#available-memes" class="anchor"></a>Available Memes</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(memer)</a>
 <a class="sourceLine" id="cb2-2" title="2"><span class="kw"><a href="reference/meme_list.html">meme_list</a></span>()</a></code></pre></div>
-<pre><code>##  [1] "AllTheThings"       "AmericanChopper"    "AncientAliens"     
-##  [4] "BatmanRobin"        "DistractedBf"       "EvilKermit"        
-##  [7] "ExpandingBrain"     "FirstWorldProbs"    "FryNotSure"        
-## [10] "IsThisAPigeon"      "NoneOfMyBusiness"   "CheersLeo"         
-## [13] "OneDoesNotSimply"   "DosEquisMan"        "OffRamp"           
-## [16] "OprahGiveaway"      "Philosoraptor"      "PicardFacePalm"    
-## [19] "PicardWTH"          "PutItPatrick"       "Spongebob"         
-## [22] "SuccessKid"         "ThatWouldBeGreat"   "TheRockDriving"    
-## [25] "ThinkAboutIt"       "TrumpBillSigning"   "TwoButtonsAnxiety" 
-## [28] "WhatIfIToldYou"     "CondescendingWonka" "Y-U-NOguy"         
-## [31] "ShiaJustDoIt"       "Rainbow"            "Purples"</code></pre>
+<pre><code>##  [1] "AllTheThings"       "AmericanChopper"    "AncientAliens"
+##  [4] "BatmanRobin"        "DistractedBf"       "EvilKermit"
+##  [7] "ExpandingBrain"     "FirstWorldProbs"    "FryNotSure"
+## [10] "HotlineDrake"       "IsThisAPigeon"      "NoneOfMyBusiness"
+## [13] "CheersLeo"          "OneDoesNotSimply"   "DosEquisMan"
+## [16] "OffRamp"            "OprahGiveaway"      "Philosoraptor"
+## [19] "PicardFacePalm"     "PicardWTH"          "Purples"
+## [22] "PutItPatrick"       "Rainbow"            "ShiaJustDoIt"
+## [25] "Spongebob"          "SuccessKid"         "ThatWouldBeGreat"
+## [28] "TheRockDriving"     "ThinkAboutIt"       "TrumpBillSigning"
+## [31] "TwoButtonsAnxiety"  "WhatIfIToldYou"     "CondescendingWonka"
+## [34] "YoDawg"             "YoDawg"             "Y-U-NOguy"</code></pre>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
@@ -116,6 +117,59 @@
 <a class="sourceLine" id="cb6-5" title="5">                    <span class="st">"But people who write packages are more important"</span>,</a>
 <a class="sourceLine" id="cb6-6" title="6">                    <span class="st">"NO! All members of the R community are valued &amp; deserve respect!"</span>)</a></code></pre></div>
 <p><img src="index_files/figure-html/chopper-1.png" width="40%" style="display: block; margin: auto;"></p>
+</div>
+<div id="post-r-memes-directly-to-twitter" class="section level2">
+<h2 class="hasAnchor">
+<a href="#post-r-memes-directly-to-twitter" class="anchor"></a>Post R Memes directly to Twitter!</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw"><a href="reference/meme_get.html">meme_get</a></span>(<span class="st">"ExpandingBrain"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/meme_text_distbf.html">meme_text_brain</a></span>(<span class="st">"Sharing memes online"</span>, </a>
+<a class="sourceLine" id="cb7-3" title="3">                  <span class="st">"Making your own memes"</span>, </a>
+<a class="sourceLine" id="cb7-4" title="4">                  <span class="st">"Making memes in R"</span>, </a>
+<a class="sourceLine" id="cb7-5" title="5">                  <span class="st">"Using rtweet to share your memes"</span>, </a>
+<a class="sourceLine" id="cb7-6" title="6">                  <span class="dt">size =</span> <span class="dv">17</span>)</a></code></pre></div>
+<p><img src="index_files/figure-html/brain-1.png" width="50%" style="display: block; margin: auto;"></p>
+<p>You can also post memes directly to Twitter. You will need to install the <a href="https://github.com/mkearney/rtweet/">rtweet</a> package for that. Just make sure to set up a Twitter token (<a href="https://rtweet.info/articles/auth.html">see here for more information on that</a>) and you are good to go. The <code>meme_tweet</code> function also includes the possibility to tag the <a href="https://twitter.com/rstatsmemes">R Memes for Statistical Fiends</a> account on Twitter for maximum exposure :)</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw"><a href="reference/meme_get.html">meme_get</a></span>(<span class="st">"DosEquisMan"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/meme_text_top.html">meme_text_top</a></span>(<span class="st">"I don't always tweet memes"</span>, <span class="dt">size =</span> <span class="dv">28</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="st">  </span><span class="kw"><a href="reference/meme_text_top.html">meme_text_bottom</a></span>(<span class="st">"But when I do</span><span class="ch">\n</span><span class="st">I use the memer package in R"</span>, <span class="dt">size =</span> <span class="dv">26</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="st">  </span><span class="kw"><a href="reference/meme_tweet.html">meme_tweet</a></span>(<span class="dt">tweet_text =</span> <span class="st">"It's dangerous to meme alone. Here take this."</span>,</a>
+<a class="sourceLine" id="cb8-5" title="5">             <span class="dt">tag_rstatsmemes =</span> T)</a></code></pre></div>
+<p><img src="https://i.imgur.com/XvKhZZc.png" width="75%" style="display: block; margin: auto;"></p>
+</div>
+<div id="confused-use-meme_explain" class="section level2">
+<h2 class="hasAnchor">
+<a href="#confused-use-meme_explain" class="anchor"></a>Confused? Use <code><a href="reference/meme_explain.html">meme_explain()</a></code>!</h2>
+<p>Using <code>meme_explain</code>, you can pass any of the meme names to be taken to their page on <a href="https://knowyourmeme.com/memes/">knowyourmeme.com</a>.</p>
+<p><g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji><g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji><g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> Content from knowyourmeme.com may be offensive. The authors of <code>memer</code> have no control over what you may see when using <code><a href="reference/meme_explain.html">meme_explain()</a></code>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw"><a href="reference/meme_explain.html">meme_explain</a></span>(<span class="st">"DistractedBf"</span>, <span class="dt">launch =</span> F, <span class="dt">content_warning =</span> T)</a></code></pre></div>
+<pre><code>&gt; knowyourmeme can contain potentially offensive results,
+  are you sure you want to open it? [Y]es / [N]o:</code></pre>
+</div>
+<div id="add-your-own-meme" class="section level2">
+<h2 class="hasAnchor">
+<a href="#add-your-own-meme" class="anchor"></a>Add your own meme!</h2>
+<p><g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji><g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji><g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> This is an advanced step. Proceed with caution.</p>
+<p>If you want to add your own meme, use <code>memer:::meme_add()</code>:</p>
+<ol style="list-style-type: decimal">
+<li>Fork this repo and clone to your system.</li>
+<li>Add your meme file to <code>inst/extdata</code>.
+<ol style="list-style-type: lower-alpha">
+<li>It should be a .png.</li>
+<li>It should be small: resolution of 72 and width no more than 500 pixels.</li>
+</ol>
+</li>
+<li>Use <code><a href="reference/meme_add.html">meme_add()</a></code> as below.</li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/getwd">setwd</a></span>(<span class="st">"path/to/your/memer"</span>)</a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="kw"><a href="reference/meme_add.html">meme_add</a></span>(<span class="st">"Memename"</span>, <span class="st">"memefile.png"</span>)</a></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Re-install <code>memer</code> as below:</li>
+</ol>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/check">check</a></span>(<span class="dt">document =</span> F)</a>
+<a class="sourceLine" id="cb12-2" title="2">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/install">install</a></span>()</a></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>(Optional) If you would like your meme to be added to <code>memer</code>, submit a pull request!</li>
+</ol>
 </div>
 </div>
   </div>
@@ -158,7 +212,7 @@
       </footer>
 </div>
 
-  
+
 
   </body>
 </html>

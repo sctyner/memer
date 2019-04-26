@@ -34,14 +34,15 @@ meme_list()
     ##  [1] "AllTheThings"       "AmericanChopper"    "AncientAliens"     
     ##  [4] "BatmanRobin"        "DistractedBf"       "EvilKermit"        
     ##  [7] "ExpandingBrain"     "FirstWorldProbs"    "FryNotSure"        
-    ## [10] "IsThisAPigeon"      "NoneOfMyBusiness"   "CheersLeo"         
-    ## [13] "OneDoesNotSimply"   "DosEquisMan"        "OffRamp"           
-    ## [16] "OprahGiveaway"      "Philosoraptor"      "PicardFacePalm"    
-    ## [19] "PicardWTH"          "PutItPatrick"       "Spongebob"         
-    ## [22] "SuccessKid"         "ThatWouldBeGreat"   "TheRockDriving"    
-    ## [25] "ThinkAboutIt"       "TrumpBillSigning"   "TwoButtonsAnxiety" 
-    ## [28] "WhatIfIToldYou"     "CondescendingWonka" "Y-U-NOguy"         
-    ## [31] "ShiaJustDoIt"       "Rainbow"            "Purples"
+    ## [10] "HotlineDrake"       "IsThisAPigeon"      "NoneOfMyBusiness"  
+    ## [13] "CheersLeo"          "OneDoesNotSimply"   "DosEquisMan"       
+    ## [16] "OffRamp"            "OprahGiveaway"      "Philosoraptor"     
+    ## [19] "PicardFacePalm"     "PicardWTH"          "Purples"           
+    ## [22] "PutItPatrick"       "Rainbow"            "ShiaJustDoIt"      
+    ## [25] "Spongebob"          "SuccessKid"         "ThatWouldBeGreat"  
+    ## [28] "TheRockDriving"     "ThinkAboutIt"       "TrumpBillSigning"  
+    ## [31] "TwoButtonsAnxiety"  "WhatIfIToldYou"     "CondescendingWonka"
+    ## [34] "YoDawg"             "YoDawg"             "Y-U-NOguy"
 
 ## Usage
 
@@ -101,4 +102,51 @@ meme_get("DosEquisMan") %>%
 
 <img src="https://i.imgur.com/XvKhZZc.png" width="75%" style="display: block; margin: auto;" />
 
-\`\`\`
+## Confused? Use `meme_explain()`\!
+
+Using `meme_explain`, you can pass any of the meme names to be taken to
+their page on [knowyourmeme.com](https://knowyourmeme.com/memes/).
+
+:warning: :warning: :warning: Content from knowyourmeme.com may be
+offensive. The authors of `memer` have no control over what you may see
+when using `meme_explain()`.
+
+``` r
+meme_explain("DistractedBf", launch = F, content_warning = T)
+```
+
+    > knowyourmeme can contain potentially offensive results,
+      are you sure you want to open it? [Y]es / [N]o:
+
+## Add your own meme\!
+
+:warning: :warning: :warning: This is an advanced step. Proceed with
+caution.
+
+If you want to add your own meme, use `memer:::meme_add()`:
+
+1.  Fork this repo and clone to your system.
+2.  Add your meme file to `inst/extdata`.
+    1.  It should be a .png.
+    2.  It should be small: resolution of 72 and width no more than 500
+        pixels.
+3.  Use `meme_add()` as below.
+
+<!-- end list -->
+
+``` r
+setwd("path/to/your/memer")
+meme_add("Memename", "memefile.png")
+```
+
+3.  Re-install `memer` as below:
+
+<!-- end list -->
+
+``` r
+devtools::check(document = F)
+devtools::install()
+```
+
+4.  (Optional) If you would like your meme to be added to `memer`,
+    submit a pull request\!

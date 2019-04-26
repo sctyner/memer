@@ -65,7 +65,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">memer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9000</span>
       </span>
     </div>
 
@@ -135,14 +135,17 @@
   <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>20</span>, <span class='no'>...</span>)
 
 <span class='fu'>meme_text_buttons</span>(<span class='no'>img</span>, <span class='no'>lbtn</span>, <span class='no'>rbtn</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>,
-  <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>18</span>, <span class='no'>...</span>)</pre>
+  <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>18</span>, <span class='no'>...</span>)
+
+<span class='fu'>meme_text_drake</span>(<span class='no'>img</span>, <span class='no'>top</span>, <span class='no'>bot</span>, <span class='kw'>font</span> <span class='kw'>=</span> <span class='st'>"Impact"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>,
+  <span class='kw'>strokecolor</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>30</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>img</th>
-      <td><p>An image of class <code>magick_image</code>. See <code><a href='meme_get.html'>meme_get</a></code>.</p></td>
+      <td><p>An image of class <code>magick_image</code>. See <code><a href='meme_get.html'>meme_get()</a></code>.</p></td>
     </tr>
     <tr>
       <th>newgirl</th>
@@ -158,15 +161,15 @@
     </tr>
     <tr>
       <th>font</th>
-      <td><p>string with font family such as `"sans"`, `"mono"`, `"serif"`, `"Times"`, `"Helvetica"`, `"Trebuchet"`, `"Georgia"`, `"Palatino"` or `"Comic Sans"`.</p></td>
+      <td><p>string with font family such as <code>"sans"</code>, <code>"mono"</code>, <code>"serif"</code>, <code>"Times"</code>, <code>"Helvetica"</code>, <code>"Trebuchet"</code>, <code>"Georgia"</code>, <code>"Palatino"</code> or <code>"Comic Sans"</code>.</p></td>
     </tr>
     <tr>
       <th>color</th>
-      <td><p>a valid [color string](https://www.imagemagick.org/Magick++/Color.html) such as `"navyblue"` or `"#000080"`</p></td>
+      <td><p>a valid <a href='https://www.imagemagick.org/Magick++/Color.html'>color string</a> such as <code>"navyblue"</code> or <code>"#000080"</code></p></td>
     </tr>
     <tr>
       <th>strokecolor</th>
-      <td><p>a [color string](https://www.imagemagick.org/Magick++/Color.html) adds a stroke (border around the text)</p></td>
+      <td><p>a <a href='https://www.imagemagick.org/Magick++/Color.html'>color string</a> adds a stroke (border around the text)</p></td>
     </tr>
     <tr>
       <th>size</th>
@@ -177,8 +180,8 @@
       <td><p>Arguments passed on to <code><a href='https://www.rdocumentation.org/packages/magick/topics/painting'>magick::image_annotate</a></code></p><dl class='dl-horizontal'>
   <dt>location</dt><dd><p>geometry string with location relative to <code>gravity</code></p></dd>
   <dt>degrees</dt><dd><p>rotates text around center point</p></dd>
-  <dt>boxcolor</dt><dd><p>a <a href='{https://www.imagemagick.org/Magick++/Color.html}{color string}'>
-</a>for background color that annotation text is rendered on.</p></dd>
+  <dt>boxcolor</dt><dd><p>a <a href='https://www.imagemagick.org/Magick++/Color.html'>color string</a>
+for background color that annotation text is rendered on.</p></dd>
 </dl></td>
     </tr>
     <tr>
@@ -269,6 +272,14 @@
       <th>rbtn</th>
       <td><p>A character string. The right button in the <code>"TwoButtonsAnxiety"</code> meme.</p></td>
     </tr>
+    <tr>
+      <th>top</th>
+      <td><p>A character string. Text for the top panel in the <code>"HotlineDrake"</code> meme.</p></td>
+    </tr>
+    <tr>
+      <th>bot</th>
+      <td><p>A character string. Text for the bottom panel in the <code>"HotlineDrake"</code> meme.</p></td>
+    </tr>
     </table>
     
     <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
@@ -283,6 +294,7 @@
 <li><p><code>meme_text_brain</code>: Text function for the expanding brain meme.</p></li>
 <li><p><code>meme_text_kermit</code>: Text function for the Off Ramp meme.</p></li>
 <li><p><code>meme_text_buttons</code>: Text function for the Two Buttons Anxiety meme.</p></li>
+<li><p><code>meme_text_drake</code>: Text function for the Drake meme.</p></li>
 </ul>
     
 
@@ -332,6 +344,11 @@
 #&gt;   format width height colorspace matte filesize density
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
 #&gt; </span><span style='color: #555555;'>1</span><span> PNG      333    504 sRGB       TRUE         0 28x28  </div><div class='input'>
+<span class='fu'><a href='meme_get.html'>meme_get</a></span>(<span class='st'>"HotlineDrake"</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>meme_text_drake</span>(<span class='st'>"Handcrafted memes"</span>, <span class='st'>"Reproducible memes"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 7</span><span>
+#&gt;   format width height colorspace matte filesize density
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'>1</span><span> PNG      500    500 sRGB       TRUE         0 28x28  </div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

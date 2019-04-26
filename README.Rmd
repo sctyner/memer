@@ -80,7 +80,38 @@ meme_get("DosEquisMan") %>%
 knitr::include_graphics("https://i.imgur.com/XvKhZZc.png")
 ```
 
+## Confused? Use `meme_explain()`! 
 
+Using `meme_explain`, you can pass any of the meme names to be taken to their page on [knowyourmeme.com](https://knowyourmeme.com/memes/). 
 
+:warning: :warning: :warning: Content from knowyourmeme.com may be offensive. The authors of `memer` have no control over what you may see when using `meme_explain()`. 
+
+```{r memeexplain, eval = F}
+meme_explain("DistractedBf", launch = F, content_warning = T)
+```
+```
+> knowyourmeme can contain potentially offensive results,
+  are you sure you want to open it? [Y]es / [N]o:
 ```
 
+## Add your own meme! 
+
+:warning: :warning: :warning: This is an advanced step. Proceed with caution.
+
+If you want to add your own meme, use `memer:::meme_add()`:
+
+1. Fork this repo and clone to your system. 
+2. Add your meme file to `inst/extdata`.
+    a. It should be a .png.
+    b. It should be small: resolution of 72 and width no more than 500 pixels. 
+2. Use `meme_add()` as below.   
+```{r memeadd, eval = F}
+setwd("path/to/your/memer")
+meme_add("Memename", "memefile.png")
+```
+3. Re-install `memer` as below:
+```{r, eval=F}
+devtools::check(document = F)
+devtools::install()
+```
+4. (Optional) If you would like your meme to be added to `memer`, submit a pull request! 

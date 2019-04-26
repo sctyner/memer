@@ -20,7 +20,7 @@ new meme you must build and install the package after running \code{meme_add()}.
 }
 \examples{
 \dontrun{
-memer::meme_add("YoDawg", "yodawg.png")
+memer:::meme_add("YoDawg", "yodawg.png")
 }
 }
 \keyword{internal}
