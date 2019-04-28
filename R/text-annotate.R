@@ -240,7 +240,7 @@ meme_text_brain <- function(img, br1, br2, br3, br4,
                    font = font, color = color, strokecolor = strokecolor,
                    gravity = "West", location = geometry_point(10,-130), size = size, ...
     ) %>%
-    image_annotate(str_wrap(br3,35), font = "Impact", color = "black", strokecolor = NULL,
+    image_annotate(str_wrap(br3,35), font = font, color = color, strokecolor = strokecolor,
                    gravity = "West", location = geometry_point(10,40), size = size, ...
     ) %>%
     image_annotate(str_wrap(br4,35),
