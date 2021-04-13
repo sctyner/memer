@@ -317,3 +317,27 @@ meme_text_drake <- function(img, top, bot,
                    gravity = "Center", location = geometry_point(125,50), size = size, ...
     )
 }
+
+#' @param left A character string. Text for the left panel in the `"MoneyPrinter"` meme.
+#' @param right A character string. Text for the right panel in the `"MoneyPrinter"` meme.
+#'
+#' @describeIn  meme_text_distbf Text function for the Money Printer meme.
+#'
+#' @examples
+#' meme_get("MoneyPrinter") %>%
+#'   meme_text_printer("nooooo!!!!!! you can't just use open source software to
+#'                     make memes without annoying watermarks on them nooooo",
+#'                     "haha meme printer go brrrr")
+#'
+#' @export
+meme_text_printer <- function(img, left, right,
+                            font = "Impact", color = "black", strokecolor = NULL,
+                            size = 13, ...){
+  image_annotate(img, str_wrap(left,30),
+                 font = font, color = color, strokecolor = strokecolor,
+                 gravity = "SouthWest", location = geometry_point(15,10), size = size, ...
+  ) %>%
+    image_annotate(str_wrap(right,30), font = "Impact", color = "black", strokecolor = NULL,
+                   gravity = "SouthEast", location = geometry_point(125,60), size = size, ...
+    )
+}
