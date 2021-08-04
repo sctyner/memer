@@ -12,6 +12,7 @@
 \alias{meme_text_buttons}
 \alias{meme_text_drake}
 \alias{meme_text_printer}
+\alias{meme_text_anakin}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(
@@ -141,6 +142,8 @@ meme_text_printer(
   size = 13,
   ...
 )
+
+meme_text_anakin(img, anakin, padme, font = "sans", size = 16, width = 35, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -219,6 +222,13 @@ for background color that annotation text is rendered on.}
 \item{left}{A character string. Text for the left panel in the \code{"MoneyPrinter"} meme.}
 
 \item{right}{A character string. Text for the right panel in the \code{"MoneyPrinter"} meme.}
+
+\item{anakin}{A character string. Text for Anakin  in the \code{"AnakinPadmeRight"} meme.}
+
+\item{padme}{A character string. Text for Padme in the \code{"AnakinPadmeRight"} meme.}
+
+\item{width}{positive integer giving target line width in characters. A
+width less than or equal to 1 will put each word on its own line.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -246,6 +256,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_drake}: Text function for the Drake meme.
 
 \item \code{meme_text_printer}: Text function for the Money Printer meme.
+
+\item \code{meme_text_anakin}: Text function for the Anakin/Padme meme.
 }}
 
 \examples{
@@ -283,5 +295,9 @@ meme_get("MoneyPrinter") \%>\%
   meme_text_printer("nooooo!!!!!! you can't just use open source software to
                     make memes without annoying watermarks on them nooooo",
                     "haha meme printer go brrrr")
+
+meme_get("AnakinPadmeRight") \%>\%
+  meme_text_anakin("I'm going to set my working directory",
+                   "With the {here} package, right?")
 
 }

@@ -341,3 +341,34 @@ meme_text_printer <- function(img, left, right,
                    gravity = "SouthEast", location = geometry_point(125,60), size = size, ...
     )
 }
+
+#' @param anakin A character string. Text for Anakin  in the `"AnakinPadmeRight"` meme.
+#' @param padme A character string. Text for Padme in the `"AnakinPadmeRight"` meme.
+#'
+#' @inheritParams stringr::str_wrap
+#' @describeIn  meme_text_distbf Text function for the Anakin/Padme meme.
+#'
+#' @examples
+#' meme_get("AnakinPadmeRight") %>%
+#'   meme_text_anakin("I'm going to set my working directory",
+#'                    "With the {here} package, right?")
+#'
+#' @export
+meme_text_anakin <- function(img, anakin, padme,
+                             font = "sans",
+                             size = 16, width = 35, ...){
+  img %>%
+    image_annotate(str_wrap(anakin, width),
+                   font = font, color = "white", strokecolor = NULL,
+                   gravity = "Center", location = geometry_point(-125,-35), size = size, ...
+    ) %>%
+    image_annotate(str_wrap(padme, width),
+                   font = font, color = "yellow", strokecolor = NULL,
+                   gravity = "Center", location = geometry_point(125,-35), size = size, ...
+    ) %>%
+    image_annotate(str_wrap(padme, width),
+                   font = font, color = "yellow", strokecolor = NULL,
+                   gravity = "Center", location = geometry_point(125,215), size = size, ...
+    )
+}
+

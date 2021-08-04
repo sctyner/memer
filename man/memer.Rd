@@ -3,6 +3,7 @@
 \docType{package}
 \name{memer}
 \alias{memer}
+\alias{memer-package}
 \title{\code{memer} package}
 \description{
 Wrapper functions around \code{magick} package functions to create memes in R.
