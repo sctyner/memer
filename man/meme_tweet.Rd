@@ -4,9 +4,12 @@
 \alias{meme_tweet}
 \title{Posts a meme to Twitter}
 \usage{
-meme_tweet(meme,
+meme_tweet(
+  meme,
   tweet_text = "It's dangerous to meme alone. Here take this.",
-  tag_rstatsmemes = FALSE, token = NULL)
+  tag_rstatsmemes = FALSE,
+  token = NULL
+)
 }
 \arguments{
 \item{meme}{an external pointer of class 'magick-image'}
@@ -20,7 +23,7 @@ default \code{token = rtweet::get_token()}, which looks for a saved
 Twitter token via environment variables (which is what \code{\link[rtweet:create_token]{rtweet::create_token()}}
 sets up by default during initial token creation). For instruction on how
 to create a Twitter token see the tokens vignette, i.e.,
-\code{vignettes("auth", "rtweet")} or see \code{?tokens}. See \code{\link[rtweet:get_token]{rtweet::get_token()}}.}
+\code{vignettes("auth", "rtweet")} or see \code{?tokens}. See \code{\link[rtweet:get_tokens]{rtweet::get_token()}}.}
 }
 \description{
 Pipe your meme directly into this function to post your meme on Twitter. Make sure to have \code{rtweet} installed!

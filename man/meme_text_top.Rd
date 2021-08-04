@@ -5,11 +5,27 @@
 \alias{meme_text_bottom}
 \title{Place text in the meme}
 \usage{
-meme_text_top(img, txt, font = "Impact", color = "white",
-  strokecolor = "black", gravity = "North", size = 44, ...)
+meme_text_top(
+  img,
+  txt,
+  font = "Impact",
+  color = "white",
+  strokecolor = "black",
+  gravity = "North",
+  size = 44,
+  ...
+)
 
-meme_text_bottom(img, txt, font = "Impact", color = "white",
-  strokecolor = "black", gravity = "South", size = 44, ...)
+meme_text_bottom(
+  img,
+  txt,
+  font = "Impact",
+  color = "white",
+  strokecolor = "black",
+  gravity = "South",
+  size = 44,
+  ...
+)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -26,13 +42,14 @@ meme_text_bottom(img, txt, font = "Impact", color = "white",
 
 \item{size}{font-size in pixels}
 
-\item{...}{Arguments passed on to \code{magick::image_annotate}
-\describe{
-  \item{location}{geometry string with location relative to \code{gravity}}
-  \item{degrees}{rotates text around center point}
-  \item{boxcolor}{a \href{https://www.imagemagick.org/Magick++/Color.html}{color string}
+\item{...}{
+  Arguments passed on to \code{\link[magick:painting]{magick::image_annotate}}
+  \describe{
+    \item{\code{location}}{geometry string with location relative to \code{gravity}}
+    \item{\code{degrees}}{rotates text around center point}
+    \item{\code{boxcolor}}{a \href{https://www.imagemagick.org/Magick++/Color.html}{color string}
 for background color that annotation text is rendered on.}
-}}
+  }}
 }
 \description{
 Place text in the meme

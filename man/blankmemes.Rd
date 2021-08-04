@@ -5,7 +5,7 @@
 \alias{blankmemes}
 \title{All the memes available for meme creation in the memer package}
 \format{
-A data frame with 37 rows and 2 variables:
+A data frame with 38 rows and 2 variables:
 \describe{
 \item{filename}{File where the image is}
 \item{name}{Name to use to call the meme in \code{\link[=meme_get]{meme_get()}}}
