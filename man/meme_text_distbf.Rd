@@ -143,15 +143,7 @@ meme_text_printer(
   ...
 )
 
-meme_text_anakin(
-  img,
-  anakin,
-  padme,
-  font = "Impact",
-  size = 18,
-  width = 35,
-  ...
-)
+meme_text_anakin(img, anakin, padme, font = "sans", size = 16, width = 35, ...)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}

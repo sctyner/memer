@@ -355,19 +355,19 @@ meme_text_printer <- function(img, left, right,
 #'
 #' @export
 meme_text_anakin <- function(img, anakin, padme,
-                             font = "Impact",
-                             size = 18, width = 35, ...){
+                             font = "sans",
+                             size = 16, width = 35, ...){
   img %>%
     image_annotate(str_wrap(anakin, width),
-                   font = font, color = "white", strokecolor = "black",
+                   font = font, color = "white", strokecolor = NULL,
                    gravity = "Center", location = geometry_point(-125,-35), size = size, ...
     ) %>%
     image_annotate(str_wrap(padme, width),
-                   font = font, color = "yellow", strokecolor = "black",
+                   font = font, color = "yellow", strokecolor = NULL,
                    gravity = "Center", location = geometry_point(125,-35), size = size, ...
     ) %>%
     image_annotate(str_wrap(padme, width),
-                   font = font, color = "yellow", strokecolor = "black",
+                   font = font, color = "yellow", strokecolor = NULL,
                    gravity = "Center", location = geometry_point(125,215), size = size, ...
     )
 }
