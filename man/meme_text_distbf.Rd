@@ -12,40 +12,146 @@
 \alias{meme_text_buttons}
 \alias{meme_text_drake}
 \alias{meme_text_printer}
+\alias{meme_text_anakin}
 \title{Specialized functions for placing text in memes}
 \usage{
-meme_text_distbf(img, newgirl, guy, oldgirl, font = "Impact",
-  color = "white", strokecolor = "black", size = 44, ...)
+meme_text_distbf(
+  img,
+  newgirl,
+  guy,
+  oldgirl,
+  font = "Impact",
+  color = "white",
+  strokecolor = "black",
+  size = 44,
+  ...
+)
 
-meme_text_rock(img, dwayne, girl, font = "Impact", color = "black",
-  strokecolor = NULL, size = 16, ...)
+meme_text_rock(
+  img,
+  dwayne,
+  girl,
+  font = "Impact",
+  color = "black",
+  strokecolor = NULL,
+  size = 16,
+  ...
+)
 
-meme_text_batman(img, robin, batman, font = "Impact", color = "black",
-  strokecolor = NULL, size = 20, ...)
+meme_text_batman(
+  img,
+  robin,
+  batman,
+  font = "Impact",
+  color = "black",
+  strokecolor = NULL,
+  size = 20,
+  ...
+)
 
-meme_text_trump(img, rightpg, leftpg = "", font = "Impact",
-  color = "black", strokecolor = NULL, size = 20, ...)
+meme_text_trump(
+  img,
+  rightpg,
+  leftpg = "",
+  font = "Impact",
+  color = "black",
+  strokecolor = NULL,
+  size = 20,
+  ...
+)
 
-meme_text_pigeon(img, isthis, humanoid, butterfly, font = "Impact",
-  color = "white", strokecolor = "black", size = 30, ...)
+meme_text_pigeon(
+  img,
+  isthis,
+  humanoid,
+  butterfly,
+  font = "Impact",
+  color = "white",
+  strokecolor = "black",
+  size = 30,
+  ...
+)
 
-meme_text_chopper(img, sr1, jr1, sr2, jr2, sr3, font = "Impact",
-  color = "white", strokecolor = "black", size = 20, ...)
+meme_text_chopper(
+  img,
+  sr1,
+  jr1,
+  sr2,
+  jr2,
+  sr3,
+  font = "Impact",
+  color = "white",
+  strokecolor = "black",
+  size = 20,
+  ...
+)
 
-meme_text_brain(img, br1, br2, br3, br4, font = "Impact",
-  color = "black", strokecolor = NULL, size = 24, ...)
+meme_text_brain(
+  img,
+  br1,
+  br2,
+  br3,
+  br4,
+  font = "Impact",
+  color = "black",
+  strokecolor = NULL,
+  size = 24,
+  ...
+)
 
-meme_text_kermit(img, good, dark, font = "Impact", color = "black",
-  strokecolor = NULL, size = 20, ...)
+meme_text_kermit(
+  img,
+  good,
+  dark,
+  font = "Impact",
+  color = "black",
+  strokecolor = NULL,
+  size = 20,
+  ...
+)
 
-meme_text_buttons(img, lbtn, rbtn, font = "Impact", color = "black",
-  strokecolor = NULL, size = 18, ...)
+meme_text_buttons(
+  img,
+  lbtn,
+  rbtn,
+  font = "Impact",
+  color = "black",
+  strokecolor = NULL,
+  size = 18,
+  ...
+)
 
-meme_text_drake(img, top, bot, font = "Impact", color = "black",
-  strokecolor = NULL, size = 30, ...)
+meme_text_drake(
+  img,
+  top,
+  bot,
+  font = "Impact",
+  color = "black",
+  strokecolor = NULL,
+  size = 30,
+  ...
+)
 
-meme_text_printer(img, left, right, font = "Impact", color = "black",
-  strokecolor = NULL, size = 13, ...)
+meme_text_printer(
+  img,
+  left,
+  right,
+  font = "Impact",
+  color = "black",
+  strokecolor = NULL,
+  size = 13,
+  ...
+)
+
+meme_text_anakin(
+  img,
+  anakin,
+  padme,
+  font = "Impact",
+  size = 18,
+  width = 35,
+  ...
+)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -64,13 +170,14 @@ meme_text_printer(img, left, right, font = "Impact", color = "black",
 
 \item{size}{font-size in pixels}
 
-\item{...}{Arguments passed on to \code{magick::image_annotate}
-\describe{
-  \item{location}{geometry string with location relative to \code{gravity}}
-  \item{degrees}{rotates text around center point}
-  \item{boxcolor}{a \href{https://www.imagemagick.org/Magick++/Color.html}{color string}
+\item{...}{
+  Arguments passed on to \code{\link[magick:painting]{magick::image_annotate}}
+  \describe{
+    \item{\code{location}}{geometry string with location relative to \code{gravity}}
+    \item{\code{degrees}}{rotates text around center point}
+    \item{\code{boxcolor}}{a \href{https://www.imagemagick.org/Magick++/Color.html}{color string}
 for background color that annotation text is rendered on.}
-}}
+  }}
 
 \item{dwayne}{A character string. Text for the top speech bubble in the \code{"TheRockDriving"} meme.}
 
@@ -123,6 +230,13 @@ for background color that annotation text is rendered on.}
 \item{left}{A character string. Text for the left panel in the \code{"MoneyPrinter"} meme.}
 
 \item{right}{A character string. Text for the right panel in the \code{"MoneyPrinter"} meme.}
+
+\item{anakin}{A character string. Text for Anakin  in the \code{"AnakinPadmeRight"} meme.}
+
+\item{padme}{A character string. Text for Padme in the \code{"AnakinPadmeRight"} meme.}
+
+\item{width}{positive integer giving target line width in characters. A
+width less than or equal to 1 will put each word on its own line.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -150,6 +264,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_drake}: Text function for the Drake meme.
 
 \item \code{meme_text_printer}: Text function for the Money Printer meme.
+
+\item \code{meme_text_anakin}: Text function for the Anakin/Padme meme.
 }}
 
 \examples{
@@ -187,5 +303,9 @@ meme_get("MoneyPrinter") \%>\%
   meme_text_printer("nooooo!!!!!! you can't just use open source software to
                     make memes without annoying watermarks on them nooooo",
                     "haha meme printer go brrrr")
+
+meme_get("AnakinPadmeRight") \%>\%
+  meme_text_anakin("I'm going to set my working directory",
+                   "With the {here} package, right?")
 
 }
