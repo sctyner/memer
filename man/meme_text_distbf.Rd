@@ -13,6 +13,7 @@
 \alias{meme_text_drake}
 \alias{meme_text_printer}
 \alias{meme_text_anakin}
+\alias{meme_text_suez}
 \title{Specialized functions for placing text in memes}
 \usage{
 meme_text_distbf(
@@ -144,6 +145,18 @@ meme_text_printer(
 )
 
 meme_text_anakin(img, anakin, padme, font = "sans", size = 16, width = 35, ...)
+
+meme_text_suez(
+  img,
+  evergiven,
+  excavator,
+  font = "Impact",
+  color = "white",
+  strokecolor = NULL,
+  size = 40,
+  width = 30,
+  ...
+)
 }
 \arguments{
 \item{img}{An image of class \code{magick_image}. See \code{\link[=meme_get]{meme_get()}}.}
@@ -229,6 +242,10 @@ for background color that annotation text is rendered on.}
 
 \item{width}{positive integer giving target line width in characters. A
 width less than or equal to 1 will put each word on its own line.}
+
+\item{evergiven}{A character string. Big text for the ship in the \code{"SuezExcavator"} meme.}
+
+\item{excavator}{A character string. Little text for the excavator in the \code{"SuezExcavator"} meme.}
 }
 \description{
 Specialized functions for placing text in memes
@@ -258,6 +275,8 @@ Specialized functions for placing text in memes
 \item \code{meme_text_printer}: Text function for the Money Printer meme.
 
 \item \code{meme_text_anakin}: Text function for the Anakin/Padme meme.
+
+\item \code{meme_text_suez}: Text function for the Suez canal excavator meme.
 }}
 
 \examples{
@@ -299,5 +318,9 @@ meme_get("MoneyPrinter") \%>\%
 meme_get("AnakinPadmeRight") \%>\%
   meme_text_anakin("I'm going to set my working directory",
                    "With the {here} package, right?")
+
+meme_get("SuezExcavator") \%>\%
+  meme_text_suez("R programming",
+                 "Me learning R programming")
 
 }

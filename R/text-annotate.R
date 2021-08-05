@@ -372,3 +372,29 @@ meme_text_anakin <- function(img, anakin, padme,
     )
 }
 
+#' @param evergiven A character string. Big text for the ship in the `"SuezExcavator"` meme.
+#' @param excavator A character string. Little text for the excavator in the `"SuezExcavator"` meme.
+#'
+#' @inheritParams stringr::str_wrap
+#' @describeIn  meme_text_distbf Text function for the Suez canal excavator meme.
+#'
+#' @examples
+#' meme_get("SuezExcavator") %>%
+#'   meme_text_suez("R programming",
+#'                  "Me learning R programming")
+#'
+#' @export
+meme_text_suez <- function(img, evergiven, excavator,
+                           font = "Impact", color = "white", strokecolor = NULL,
+                           size = 40, width = 30, ...){
+  img %>%
+    image_annotate(str_wrap(evergiven, width),
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "Center", location = geometry_point(60,-200), size = size, ...
+    ) %>%
+    image_annotate(str_wrap(excavator, width),
+                   font = font, color = color, strokecolor = strokecolor,
+                   gravity = "Center", location = geometry_point(-60,80), size = size / 2, ...
+    )
+}
+
